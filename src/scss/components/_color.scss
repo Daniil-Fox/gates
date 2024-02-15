@@ -1,0 +1,241 @@
+.color {
+  padding-bottom: 140px;
+
+  &__title {
+    margin-bottom: 62px;
+
+    span {
+      color: var(--siniy1);
+    }
+  }
+
+  &__desc {
+    margin-bottom: 60px;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+}
+
+.color-item {
+  &__color {
+    height: 60px;
+    border: 2px solid var(--svetlo-siniy);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 8px;
+    transition: border-color .2s ease-out;
+
+
+
+    div {
+      width: 100%;
+      height: 100%;
+      border-radius: 5px;
+    }
+
+    &.n9005 {
+      color: #0a0a00;
+
+      div {
+        background: #0a0a00;
+      }
+    }
+
+    &.n7016 {
+      color: #373f42;
+
+      div {
+        background: #373f42;
+      }
+    }
+
+    &.n7024 {
+      color: #474a4f;
+
+      div {
+        background: #474a4f;
+      }
+    }
+
+    &.n8019 {
+      color: #403a3a;
+
+      div {
+        background: #403a3a;
+      }
+    }
+
+    &.n8017 {
+      color: #44332c;
+
+      div {
+        background: #44332c;
+      }
+    }
+
+    &.n8014 {
+      color: #4a3a2d;
+
+      div {
+        background: #4a3a2d;
+      }
+    }
+
+    &.n7040 {
+      color: #9ea3a7;
+
+      div {
+        background: #9ea3a7;
+      }
+    }
+
+    &.n7004 {
+      color: #969992;
+
+      div {
+        background: #969992;
+      }
+    }
+
+    &.n9006 {
+      color: #a6a8a7;
+
+      div {
+        background: #a6a8a7;
+      }
+    }
+
+    &.n7038 {
+      color: #b5b8b1;
+
+      div {
+        background: #b5b8b1;
+      }
+    }
+
+    &.n9016 {
+      color: #d5d9e4;
+
+      div {
+        background: #d5d9e4;
+      }
+    }
+
+    &.n9003 {
+      color: #f4f4f4;
+
+      div {
+        background: #f4f4f4;
+      }
+    }
+
+    &.n3005 {
+      color: #5e2129;
+
+      div {
+        background: #5e2129;
+      }
+    }
+
+    &.n3004 {
+      color: #701f28;
+
+      div {
+        background: #701f28;
+      }
+    }
+
+    &.n3003 {
+      color: #8d1c2c;
+
+      div {
+        background: #8d1c2c;
+      }
+    }
+
+    &.n2004 {
+      color: #e85b13;
+
+      div {
+        background: #e85b13;
+      }
+    }
+
+    &.n1018 {
+      color: #f3e03b;
+
+      div {
+        background: #f3e03b;
+      }
+    }
+
+    &.n1015 {
+      color: #e7d690;
+
+      div {
+        background: #e7d690;
+      }
+    }
+
+    &.n5002 {
+      color: #2b2c7c;
+
+      div {
+        background: #2b2c7c;
+      }
+    }
+
+    &.n5005 {
+      color: #144889;
+
+      div {
+        background: #144889;
+      }
+    }
+
+    &.n5010 {
+      color: #13447c;
+
+      div {
+        background: #13447c;
+      }
+    }
+
+    &.n6005 {
+      color: #0f4336;
+
+      div {
+        background: #0f4336;
+      }
+    }
+
+    &.n6018 {
+      color: #48a43f;
+
+      div {
+        background: #48a43f;
+      }
+    }
+
+    @include hover {
+      border-color: currentColor;
+    }
+  }
+
+  &__text {
+    display: block;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 156%;
+    text-align: center;
+    color: var(--chernyy);
+  }
+}

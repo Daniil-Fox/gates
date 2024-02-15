@@ -14,6 +14,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/modal */ "./src/js/components/modal.js");
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_faq__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/faq */ "./src/js/components/faq.js");
+/* harmony import */ var _components_faq__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_faq__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
@@ -188,6 +191,26 @@ dropdownMini.forEach(el => {
     content.style.maxHeight = isActive ? content.scrollHeight + 'px' : null;
   });
 });
+
+/***/ }),
+
+/***/ "./src/js/components/faq.js":
+/*!**********************************!*\
+  !*** ./src/js/components/faq.js ***!
+  \**********************************/
+/***/ (() => {
+
+const faqItems = document.querySelectorAll('.faq__item');
+if (faqItems && faqItems.length > 0) {
+  faqItems.forEach(el => {
+    const btn = el.querySelector('.faq__header');
+    btn.addEventListener('click', e => {
+      const content = el.querySelector('.faq__content');
+      const isActive = el.classList.toggle('active');
+      content.style.maxHeight = isActive ? content.scrollHeight + 'px' : null;
+    });
+  });
+}
 
 /***/ }),
 

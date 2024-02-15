@@ -185,3 +185,35 @@
     }
   }
 }
+
+
+.benefits--gates {
+  border-radius: 0;
+  background: none;
+
+  .benefits {
+    &__subtitle {
+      color: var(--siniy2);
+    }
+
+    &__title {
+      color: var(--siniy2);
+    }
+  }
+
+  .benefit {
+    &__fig {
+      span {
+        color: var(--svetlo-siniy);
+      }
+    }
+
+    &__title {
+      color: var(--chernyy);
+    }
+
+    &__desc {
+      color: var(--chernyy);
+    }
+  }
+}

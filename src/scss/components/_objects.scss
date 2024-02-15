@@ -313,3 +313,31 @@
     transform: translateX(0);
   }
 }
+
+.obj-char {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  &__value {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 156%;
+    text-align: right;
+    color: var(--chernyy);
+
+    span {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 145%;
+      color: var(--siniy1);
+    }
+  }
+}
+
+
+.objects--gates {
+  .object__title {
+    margin-bottom: 30px;
+  }
+}
