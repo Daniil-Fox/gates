@@ -1,0 +1,34 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Manrope", sans-serif;
+  --content-width: 1660px;
+  --container-offset: 15px;
+
+  @include for-desktop {
+    --content-width: 1440px;
+  }
+
+  @include big-desktop {
+    --content-width: 1200px;
+  }
+
+  @include small-tablet {
+    --content-width: 100%;
+    --container-offset: 20px;
+  }
+
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  --chernyy: #1c1c1c;
+  --belyy: #fff;
+  --siniy1: #0b83f2;
+  --siniy2: #002344;
+  --svetlo-siniy: #ecf1f7;
+  --seryy: #ebebeb;
+  --zelenyy: #22c04e;
+  --krasnyy: #d93b3b;
+
+
+}

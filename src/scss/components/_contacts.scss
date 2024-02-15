@@ -1,0 +1,245 @@
+.contacts {
+  padding-bottom: 140px;
+
+  @include big-desktop {
+    padding-bottom: 80px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 60px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+  }
+
+  &__left {
+    grid-column: 8 span;
+  }
+
+  &__right {
+    grid-column: 4 span;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+
+    @include big-desktop {
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__data {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 60px;
+
+    @include big-desktop {
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    &>svg {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+
+      @include big-desktop {
+        width: 42px;
+        height: 42px;
+      }
+
+      @include tablet {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  &__capture {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--chernyy);
+
+    @include big-desktop {
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include small-tablet {
+      gap: 20px;
+    }
+  }
+
+  &__value {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+    color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 13px;
+    }
+  }
+
+  &__extra {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+      width: 16px;
+      height: 16px;
+
+      @include tablet {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171%;
+    color: var(--chernyy);
+
+    @include tablet {
+      font-size: 10px;
+    }
+  }
+
+  &__map {
+    height: 466px;
+    border-radius: 40px;
+    overflow: hidden;
+
+    @include big-desktop {
+      height: 400px;
+    }
+
+    @include tablet {
+      height: 350px;
+    }
+  }
+}
+
+.rate {
+  border: 2px solid var(--svetlo-siniy);
+  border-radius: 40px;
+  padding: 40px 50px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @include big-desktop {
+    padding: 30px 40px;
+  }
+
+  @include tablet {
+    padding: 24px 28px;
+    border-radius: 24px;
+    gap: 20px;
+  }
+
+  &__icon {
+    width: 68px;
+    height: 68px;
+
+    @include big-desktop {
+      width: 56px;
+      height: 56px;
+    }
+
+    @include tablet {
+      width: 48px;
+      height: 48px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__capture {
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 125%;
+    color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 26px;
+      margin-bottom: 14px;
+    }
+
+    @include tablet {
+      font-size: 22px;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include big-desktop {
+      gap: 6px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+
+      @include big-desktop {
+        width: 20px;
+        height: 20px;
+      }
+
+      @include tablet {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

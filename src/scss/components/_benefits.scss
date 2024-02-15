@@ -1,0 +1,174 @@
+.benefits {
+  border-radius: 80px;
+  padding: 140px 0;
+  background: var(--siniy2);
+
+  @include big-desktop {
+    padding: 80px 0;
+    border-radius: 60px;
+  }
+
+  @include tablet {
+    padding: 60px 0;
+    border-radius: 40px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 28px;
+    display: block;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 125%;
+    color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 28px;
+    }
+
+    @include tablet {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 80px;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 115%;
+    color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 48px;
+    }
+
+    @include tablet {
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      font-size: 30px;
+      margin-bottom: 60px;
+    }
+
+    span {
+      color: var(--siniy1);
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include small-tablet {
+      grid-template-columns: 1fr 1fr;
+      gap: 44px 20px;
+    }
+  }
+}
+
+.benefit {
+
+  &__fig {
+    position: relative;
+    display: block;
+    margin-bottom: 75px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 54px;
+      line-height: 115%;
+      color: var(--belyy);
+
+      @include big-desktop {
+        font-size: 48px;
+      }
+
+      @include tablet {
+        font-size: 40px;
+      }
+
+      @include small-tablet {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+    width: 54px;
+    height: 54px;
+
+    @include big-desktop {
+      width: 48px;
+      height: 48px;
+    }
+
+    @include tablet {
+      width: 40px;
+      height: 40px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 145%;
+    color: var(--belyy);
+
+    @include tablet {
+      margin-bottom: 22px;
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--belyy);
+    max-width: 250px;
+
+    @include tablet {
+      font-size: 15px;
+    }
+
+    @include small-tablet {
+      font-size: 13px;
+    }
+  }
+}

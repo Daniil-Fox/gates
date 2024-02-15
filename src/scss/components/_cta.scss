@@ -1,0 +1,227 @@
+.cta {
+  padding: 75px 0;
+  background-image: url('./../img/cta-bg-2x.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 40px;
+
+  @include tablet {
+    padding: 60px 0;
+    border-radius: 20px;
+  }
+
+  @include small-tablet {
+    padding: 40px 27px 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 1;
+    color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 48px;
+    }
+
+    @include tablet {
+      font-size: 40px;
+    }
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      border-radius: 15px;
+      padding: 15px;
+      width: 543px;
+      height: 71px;
+      background: var(--siniy1);
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+
+      @include tablet {
+        padding: 12px;
+        height: auto;
+      }
+
+      @include small-tablet {
+        display: inline-block;
+        width: auto;
+      }
+    }
+  }
+
+  &__desc {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    padding: 10px 15px;
+    background: var(--belyy);
+
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 145%;
+    color: var(--siniy2);
+
+    @include big-desktop {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 115%;
+    color: var(--belyy);
+
+    @include big-desktop {
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+
+    @include tablet {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 30px;
+      margin-bottom: 40px;
+    }
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 70px;
+
+    @include tablet {
+      gap: 30px;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 70px;
+
+    @include big-desktop {
+      gap: 20px 40px;
+    }
+
+    @include tablet {
+      gap: 20px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    gap: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--belyy);
+
+    @include big-desktop {
+      gap: 16px;
+      font-size: 16px;
+    }
+
+    @include tablet {
+      gap: 8px;
+    }
+
+    @include small-tablet {
+      gap: 12px;
+      font-size: 13px;
+    }
+
+    &::before {
+      content: "";
+      display: flex;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background-color: var(--zelenyy);
+      background-image: url('./../img/check.svg');
+      background-position: center center;
+      background-size: 24px 24px;
+      background-repeat: no-repeat;
+
+      @include big-desktop {
+        width: 32px;
+        height: 32px;
+        background-size: 18px 18px;
+      }
+
+      @include tablet {
+        width: 28px;
+        height: 28px;
+        background-size: 16px 16px;
+        border-radius: 8px;
+      }
+
+      @include small-tablet {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+
+    @include small-tablet {
+      padding: 30px 60px;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,224 @@
+.hero {
+
+  &__container {
+    padding: 105px 0;
+    background-color: var(--seryy);
+    border-radius: 40px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 20px;
+
+    @include big-desktop {
+      padding: 60px 0;
+    }
+
+    @include tablet {
+      padding: 40px 0;
+      border-radius: 10px;
+      grid-template-columns: 1fr;
+    }
+
+    @include small-tablet {
+      padding: 40px 30px;
+    }
+  }
+
+  &__content {
+    padding-left: 120px;
+
+    @include tablet {
+      padding-left: 60px;
+    }
+
+    @include small-tablet {
+      padding: 0;
+    }
+  }
+
+  &__image {
+    @include tablet {
+      width: 60%;
+      margin-left: auto;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 62px;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 115%;
+    color: var(--siniy2);
+
+    @include big-desktop {
+      font-size: 48px;
+      margin-bottom: 58px;
+    }
+
+    @include tablet {
+      font-size: 40px;
+      max-width: 70%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 60px;
+    position: relative;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      gap: 8px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -45px;
+      top: -30px;
+      width: 130px;
+      height: 136px;
+
+      background-image: url('./../img/map-bg.svg');
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include tablet {
+        width: 100px;
+        height: 100px;
+        left: -35px;
+        top: -15px;
+      }
+
+      @include small-tablet {
+        width: 50px;
+        height: 52px;
+        left: -10px;
+        top: 0;
+      }
+    }
+  }
+
+  &__city {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include small-tablet {
+      gap: 8px;
+    }
+
+    svg {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      flex-shrink: 0;
+
+      @include big-desktop {
+        width: 26px;
+        height: 26px;
+      }
+
+      @include small-tablet {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 125%;
+      color: var(--chernyy);
+
+      @include big-desktop {
+        font-size: 26px;
+      }
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      @include small-tablet {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__days {
+    flex-shrink: 0;
+    border-radius: 15px;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 125%;
+    color: var(--zelenyy);
+    background: var(--belyy);
+
+    @include big-desktop {
+      font-size: 26px;
+      padding: 18px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+      padding: 14px;
+    }
+
+    @include small-tablet {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 10px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    @include tablet {
+      gap: 20px;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--chernyy);
+    max-width: 275px;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include tablet {
+      font-size: 13px;
+      line-height: 154%;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    @include tablet {
+      margin-right: -30px;
+    }
+  }
+}

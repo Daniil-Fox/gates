@@ -1,0 +1,289 @@
+.footer {
+  border-radius: 80px 80px 0 0;
+  padding: 80px 0;
+  background: var(--svetlo-siniy);
+
+  @include big-desktop {
+    border-radius: 40px 40px 0 0;
+    padding: 60px 0;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 10px;
+    }
+  }
+
+  &__header {
+    grid-column: 4 span;
+
+    @include small-tablet {
+      grid-column: 2 span;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 60px;
+
+    @include big-desktop {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__address {}
+
+  &__links {
+    display: inline-flex;
+    flex-direction: column;
+
+    a {
+      display: block;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 125%;
+      color: var(--chernyy);
+
+      @include big-desktop {
+        font-size: 26px;
+      }
+
+      @include small-tablet {
+        font-size: 22px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @include small-tablet {
+          margin-bottom: 16px;
+        }
+      }
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__copy {
+    margin-top: auto;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171%;
+    color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 10px;
+      line-height: 150%
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__soc {
+    grid-column: 11 / 2 span;
+
+    @include small-tablet {
+      grid-column: 2 span;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.cont {
+  display: flex;
+  gap: 12px;
+
+  @include big-desktop {
+    gap: 8px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+
+    @include big-desktop {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+
+    @include big-desktop {
+      width: 20px;
+      height: 20px;
+    }
+
+    @include small-tablet {
+      width: 18px;
+      height: 18px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__capture {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    @include small-tablet {
+      font-size: 10px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__value {
+    display: block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 15px;
+    }
+  }
+}
+
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+
+  &:nth-of-type(1) {
+    grid-column: 2 span;
+
+    @include small-tablet {
+      grid-column: 1 span;
+    }
+  }
+
+  &:nth-of-type(2) {
+    grid-column: 8 / 2 span;
+
+    @include small-tablet {
+      grid-column: 1 span;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--siniy2);
+
+    @include big-desktop {
+      margin-bottom: 28px;
+      font-size: 18px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include big-desktop {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--chernyy);
+
+    @include big-desktop {
+      font-size: 16px;
+    }
+
+    @include small-tablet {
+      font-size: 13px;
+    }
+  }
+}
+
+
+.footer-soc {
+  display: flex;
+
+  gap: 8px;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+
+    @include big-desktop {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+    }
+
+    @include small-tablet {
+      width: 40px;
+      height: 40px;
+    }
+
+    svg {
+      @include big-desktop {
+        width: 16px;
+        height: 16px;
+        object-fit: contain;
+      }
+    }
+
+    &--vk {
+      box-shadow: 0 14px 35px 0 rgba(0, 119, 255, 0.3);
+      background: #07f;
+    }
+
+    &--ok {
+      box-shadow: 0 14px 35px 0 rgba(247, 147, 30, 0.3);
+      background: #f7931e;
+    }
+
+    &--tg {
+      box-shadow: 0 14px 35px 0 rgba(51, 144, 236, 0.3);
+      background: #3390ec;
+    }
+  }
+}

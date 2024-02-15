@@ -1,0 +1,19 @@
+// базовые подключения
+@import "mixins";
+@import "vars";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/nav";
+@import "./components/hero";
+@import "./components/figures";
+@import "./components/products";
+@import "./components/objects";
+@import "./components/benefits";
+@import "./components/about-sec";
+@import "./components/cta";
+@import "./components/news-sec";
+@import "./components/contacts";
+@import "./components/footer";

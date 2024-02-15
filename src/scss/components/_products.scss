@@ -1,0 +1,283 @@
+.products {
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 340px);
+    gap: 20px;
+
+    @include big-desktop {
+      grid-template-rows: repeat(2, 280px);
+    }
+
+    @include tablet {
+      grid-template-rows: repeat(2, 200px);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 156px);
+      gap: 8px
+    }
+  }
+
+  &__item {
+    &:nth-child(1) {
+      grid-row: 2 span;
+
+      .prod-item__image {
+        top: unset;
+        transform: unset;
+        left: 25px;
+        height: 85%;
+        width: 462px;
+        bottom: 60px;
+
+        @include tablet {
+          bottom: 0;
+        }
+
+        @include small-tablet {
+          height: 60%;
+          left: 100px;
+          bottom: 60px;
+        }
+
+        @include mobile {
+          left: 30px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      grid-column: 2 span;
+
+      .prod-item__images {
+        left: 130px;
+        transform: none;
+        top: -59px;
+
+        @include tablet {
+          top: -40px;
+          left: 100px;
+        }
+
+        @include small-tablet {
+          left: 20px;
+        }
+      }
+
+      .prod-item__image {
+        height: 555px;
+
+        @include tablet {
+          height: 300px;
+        }
+
+        @include small-tablet {
+          height: 243px;
+          width: 300px;
+        }
+      }
+
+
+      @include small-tablet {
+        order: -1;
+      }
+    }
+
+    &:nth-child(3) {
+      .prod-item__images {
+        left: 40px;
+        top: 80px;
+        transform: unset;
+
+        @include tablet {
+          top: 0;
+        }
+
+        @include mobile {
+          top: 57px;
+          left: 20px;
+        }
+      }
+
+      .prod-item__image {
+        height: 359px;
+
+        @include mobile {
+          width: 168px;
+          height: 126px;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .prod-item__images {
+        top: 104px;
+        left: 170px;
+        transform: unset;
+
+        @include tablet {
+          left: 120px;
+          top: 50px;
+        }
+
+        @include mobile {
+          left: 30px;
+          top: 60px;
+        }
+      }
+
+      .prod-item__image {
+        width: 480px;
+
+        @include big-desktop {
+          width: 400px;
+        }
+
+        @include tablet {
+          width: 300px;
+        }
+
+        @include mobile {
+          width: 194px;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      grid-column: 2 span;
+
+      .prod-item__images {}
+
+      .prod-item__image {
+        height: 100%;
+        width: 340px;
+        right: 140px;
+
+        @include big-desktop {
+          right: 40px;
+        }
+
+        @include tablet {
+          width: 200px;
+        }
+
+        @include small-tablet {
+          width: 166px;
+          right: 0;
+        }
+
+        img {
+          @include small-tablet {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.prod-item {
+  overflow: hidden;
+  padding: 50px;
+  padding-right: 0;
+  padding-bottom: 0;
+  border-radius: 40px;
+  background-color: var(--svetlo-siniy);
+  mix-blend-mode: multiply;
+  position: relative;
+  transition: background-color .3s ease-out;
+
+  @include big-desktop {
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  @include tablet {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  @include small-tablet {
+    padding: 30px;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 125%;
+    color: var(--chernyy);
+    max-width: 200px;
+    transition: color .3s ease-out;
+
+    @include big-desktop {
+      font-size: 26px;
+    }
+
+    @include tablet {
+      font-size: 22px;
+    }
+  }
+
+  &:hover {
+    background-color: var(--siniy1);
+
+    .prod-item__image {
+
+      &:nth-child(1) {
+        opacity: 0;
+        z-index: -1;
+
+      }
+
+      &:nth-child(2) {
+        opacity: 1;
+        z-index: 1;
+      }
+
+    }
+
+    .prod-item__title {
+      color: var(--belyy);
+    }
+  }
+
+  &__images {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: filter .3s ease-out;
+
+  }
+
+  &__image {
+
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    transition: opacity .3s ease-out, z-index .3s ease-out;
+
+    &:nth-child(1) {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      z-index: -1;
+    }
+
+    img {
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
