@@ -79,8 +79,8 @@
 
     @include mobile {
       text-align: center;
-
       margin: 0 auto;
+      margin-bottom: 32px;
     }
   }
 
@@ -97,6 +97,11 @@
 
     @include small-tablet {
       gap: 8px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 13px;
     }
 
     &::before {
@@ -124,6 +129,11 @@
         height: 52px;
         left: -10px;
         top: 0;
+      }
+
+      @include mobile {
+        left: 32px;
+        top: -14px;
       }
     }
   }

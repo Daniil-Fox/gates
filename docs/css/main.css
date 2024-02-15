@@ -769,6 +769,7 @@ a {
   .hero__title {
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 32px;
   }
 }
 .hero__info {
@@ -790,6 +791,15 @@ a {
 @media (max-width: 768px) {
   .hero__info {
     gap: 8px;
+  }
+}
+@media (max-width: 576px) {
+  .hero__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 13px;
   }
 }
 .hero__info::before {
@@ -818,6 +828,12 @@ a {
     height: 52px;
     left: -10px;
     top: 0;
+  }
+}
+@media (max-width: 576px) {
+  .hero__info::before {
+    left: 32px;
+    top: -14px;
   }
 }
 .hero__city {
