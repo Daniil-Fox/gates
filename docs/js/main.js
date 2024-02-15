@@ -12,6 +12,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sliders */ "./src/js/components/sliders.js");
 /* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/components/dropdown.js");
 /* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_dropdown__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/modal */ "./src/js/components/modal.js");
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -184,6 +187,39 @@ dropdownMini.forEach(el => {
     const isActive = el.classList.toggle('active');
     content.style.maxHeight = isActive ? content.scrollHeight + 'px' : null;
   });
+});
+
+/***/ }),
+
+/***/ "./src/js/components/modal.js":
+/*!************************************!*\
+  !*** ./src/js/components/modal.js ***!
+  \************************************/
+/***/ (() => {
+
+const modalForm = document.querySelector('[data-modal-form]');
+const modalFormWindow = document.querySelector('[data-modal-form] .modal__window');
+const modalFormClose = modalFormWindow.querySelector('.modal__close');
+const modalBtns = document.querySelectorAll('[data-modal-btn]');
+modalBtns.forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    modalForm.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+});
+modalForm.addEventListener('click', e => {
+  e.stopPropagation();
+  modalForm.classList.remove('active');
+  document.body.style.overflow = null;
+});
+modalFormClose.addEventListener('click', e => {
+  e.stopPropagation();
+  modalForm.classList.remove('active');
+  document.body.style.overflow = null;
+});
+modalFormWindow.addEventListener('click', e => {
+  e.stopPropagation();
 });
 
 /***/ }),

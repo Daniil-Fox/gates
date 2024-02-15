@@ -5,6 +5,46 @@
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80%;
+    filter: blur(3px);
+    background: linear-gradient(180deg, rgba(0, 35, 68, 0) 0%, #002344 100%);
+    opacity: 0.75;
+  }
+
+  &__man {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 15%;
+
+    img {
+      height: 100%;
+    }
+
+    @include tablet {
+      img {
+        margin-right: 7%;
+      }
+    }
+
+    @include small-tablet {
+      margin-right: 0;
+      height: 300px;
+      justify-content: center;
+    }
+  }
 
   @include tablet {
     padding: 60px 0;
@@ -12,7 +52,7 @@
   }
 
   @include small-tablet {
-    padding: 40px 27px 130px;
+    padding: 40px 27px 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,6 +60,8 @@
   }
 
   &__title {
+    position: relative;
+    z-index: 5;
     margin: 0;
     margin-bottom: 8px;
     font-weight: 500;
@@ -33,11 +75,13 @@
 
     @include tablet {
       font-size: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     @include small-tablet {
-      display: flex;
-      flex-direction: column;
+
       align-items: center;
       text-align: center;
       font-size: 30px;
@@ -75,12 +119,11 @@
       @include tablet {
         padding: 12px;
         height: auto;
-      }
-
-      @include small-tablet {
         display: inline-block;
         width: auto;
       }
+
+      @include small-tablet {}
 
       @include mobile {
         display: none;
@@ -89,6 +132,8 @@
   }
 
   &__desc {
+    position: relative;
+    z-index: 5;
     display: inline-block;
     margin: 0;
     margin-bottom: 50px;
@@ -138,6 +183,8 @@
   }
 
   &__link {
+    position: relative;
+    z-index: 5;
     display: block;
     margin-bottom: 50px;
     font-weight: 500;
@@ -170,6 +217,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 70px;
+    position: relative;
+    z-index: 5;
 
     @include tablet {
       gap: 30px;

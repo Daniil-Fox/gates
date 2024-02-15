@@ -40,6 +40,11 @@
     font-size: 18px;
     line-height: 156%;
     color: var(--chernyy);
+    transition: color .3s ease-out;
+
+    @include hover {
+      color: var(--siniy1);
+    }
 
     svg {
       width: 20px;

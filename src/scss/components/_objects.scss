@@ -82,6 +82,10 @@
 
     transition: background-color .3s ease-out, color .3s ease-out;
 
+    @include hover {
+      color: var(--siniy1);
+    }
+
     @include big-desktop {
       font-size: 16px;
       padding: 22px;
@@ -152,6 +156,7 @@
   padding-bottom: 40px;
   transition: border-color .3s ease-out;
   height: 100%;
+  position: relative;
 
   @include tablet {
     border-radius: 20px;
@@ -269,7 +274,17 @@
     text-align: center;
     margin-top: auto;
 
+    transition: color .3s ease-out;
 
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+
+    @include hover {
+      color: var(--siniy1);
+    }
 
     @include tablet {
       padding: 18px 20px;

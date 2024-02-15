@@ -128,6 +128,11 @@ a {
     background: var(--svetlo-siniy);
     color: var(--chernyy);
     box-shadow: none;
+    transition: color .3s ease-out;
+
+    @include hover {
+      color: var(--siniy1);
+    }
   }
 
   @include for-desktop {
@@ -166,5 +171,37 @@ a {
 
   @include small-tablet {
     font-size: 30px;
+  }
+}
+
+.desc {
+  margin: 0;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 145%;
+  color: var(--chernyy);
+}
+
+.input {
+  background: var(--svetlo-siniy);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  color: var(--chernyy);
+  padding: 40px;
+
+  &::placeholder {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 156%;
+    color: rgba(#000, 0.25);
+  }
+
+  @include hover {
+    outline: 2px solid var(--siniy1);
+  }
+
+  &:focus {
+    outline: 2px solid var(--siniy1);
   }
 }
