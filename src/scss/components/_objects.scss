@@ -109,10 +109,14 @@
   }
 
   &__swiper-btn {
-    display: block;
+    display: none;
     width: 32px;
     height: 32px;
     animation: swipe 8s ease-in infinite;
+
+    @include small-tablet {
+      display: block;
+    }
 
     svg {
       width: 100%;

@@ -1544,11 +1544,16 @@ a {
   }
 }
 .objects__swiper-btn {
-  display: block;
+  display: none;
   width: 32px;
   height: 32px;
   -webkit-animation: swipe 8s ease-in infinite;
   animation: swipe 8s ease-in infinite;
+}
+@media (max-width: 768px) {
+  .objects__swiper-btn {
+    display: block;
+  }
 }
 .objects__swiper-btn svg {
   width: 100%;
