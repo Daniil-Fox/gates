@@ -38,9 +38,19 @@
   }
 
   &__image {
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+
     @include tablet {
       width: 60%;
+      margin-right: -30px;
       margin-left: auto;
+    }
+
+    @include mobile {
+      width: 100%;
     }
   }
 
@@ -61,6 +71,16 @@
       font-size: 40px;
       max-width: 70%;
       margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      font-size: 30px;
+    }
+
+    @include mobile {
+      text-align: center;
+
+      margin: 0 auto;
     }
   }
 
@@ -191,6 +211,11 @@
     @include tablet {
       gap: 20px;
     }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__desc {
@@ -205,20 +230,24 @@
       font-size: 16px;
     }
 
-    @include tablet {
+    @include small-tablet {
       font-size: 13px;
       line-height: 154%;
     }
-  }
 
-  &__image {
-    img {
-      width: 100%;
-      object-fit: contain;
-    }
-
-    @include tablet {
-      margin-right: -30px;
+    @include mobile {
+      text-align: center;
     }
   }
+
+  &__btn {
+    line-height: 1;
+
+    @include mobile {
+      padding: 27px 83px;
+      border-radius: 15px;
+      font-size: 16px;
+    }
+  }
+
 }

@@ -72,11 +72,24 @@
     @include small-tablet {
       grid-template-columns: 1fr 1fr;
       gap: 44px 20px;
+      padding: 0 25px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 40px 0;
     }
   }
 }
 
 .benefit {
+  position: relative;
+
+  @include mobile {
+    display: flex;
+    align-items: flex-start;
+    gap: 19px;
+  }
 
   &__fig {
     position: relative;

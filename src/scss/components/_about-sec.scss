@@ -149,6 +149,13 @@
   }
 
   &__btn {
+    &--wrapper {
+      @include mobile {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
     padding: 22px 30px;
     box-shadow: 0 14px 35px 0 rgba(11, 131, 242, 0.3);
     font-size: 18px;

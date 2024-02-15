@@ -43,6 +43,10 @@
       font-size: 30px;
     }
 
+    @include mobile {
+      margin-bottom: 4px;
+    }
+
     span {
       display: flex;
       align-items: center;
@@ -52,8 +56,20 @@
       height: 71px;
       background: var(--siniy1);
 
+      &.mob {
+        display: none;
+
+        @include mobile {
+          display: flex;
+        }
+      }
+
       &:not(:last-child) {
         margin-bottom: 8px;
+
+        @include mobile {
+          margin-bottom: 4px;
+        }
       }
 
       @include tablet {
@@ -64,6 +80,10 @@
       @include small-tablet {
         display: inline-block;
         width: auto;
+      }
+
+      @include mobile {
+        display: none;
       }
     }
   }
@@ -93,6 +113,27 @@
 
     @include small-tablet {
       margin-bottom: 40px;
+    }
+
+    @include mobile {
+      padding: 0;
+      border-radius: none;
+      padding: none;
+      background: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        display: inline-block;
+        padding: 8px 12px;
+        background: var(--belyy);
+        border-radius: 10px;
+
+        &:not(:last-child) {
+          margin-bottom: 4px;
+        }
+      }
     }
   }
 
@@ -220,7 +261,7 @@
     flex-shrink: 0;
 
     @include small-tablet {
-      padding: 30px 60px;
+      padding: 21px 60px;
       font-size: 16px;
     }
   }

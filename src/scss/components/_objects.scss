@@ -62,6 +62,10 @@
     @include tablet {
       font-size: 22px;
     }
+
+    @include small-tablet {
+      max-width: 300px;
+    }
   }
 
   &__btn {
