@@ -49,10 +49,16 @@
 
     a {
       display: block;
+      position: relative;
       font-weight: 400;
       font-size: 32px;
       line-height: 125%;
       color: var(--chernyy);
+      transition: color .3s ease-out;
+
+      @include hover {
+        color: var(--siniy1);
+      }
 
       @include big-desktop {
         font-size: 26px;
@@ -70,9 +76,7 @@
         }
       }
 
-      @include hover {
-        text-decoration: underline;
-      }
+
     }
   }
 
@@ -225,8 +229,33 @@
   &__link {
     font-weight: 300;
     font-size: 18px;
-    line-height: 1;
+    line-height: 156%;
     color: var(--chernyy);
+    position: relative;
+    display: inline-block;
+    transition: color .3s ease-out;
+
+    @include hover {
+      color: var(--siniy1);
+
+      &::after {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 10%;
+      opacity: 0;
+      height: 1px;
+      background-color: var(--siniy1);
+
+      transition: opacity .2s ease-out .05s, width .3s ease-out;
+    }
 
     @include big-desktop {
       font-size: 16px;

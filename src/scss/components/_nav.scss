@@ -10,12 +10,36 @@
   }
 
   &__link {
+    display: inline-block;
+    position: relative;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 14px;
     line-height: 171%;
     color: var(--belyy);
     transition: color .3s ease-out;
+
+    @include hover {
+      color: var(--siniy1);
+
+      &::after {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 10%;
+      opacity: 0;
+      height: 1px;
+      background-color: var(--siniy1);
+
+      transition: opacity .2s ease-out .05s, width .3s ease-out;
+    }
 
     @include tablet {
       font-size: 12px;
