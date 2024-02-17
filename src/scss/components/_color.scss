@@ -1,8 +1,24 @@
 .color {
   padding-bottom: 140px;
 
+  @include big-desktop {
+    padding-bottom: 80px;
+  }
+
+  @include tablet {
+    padding-bottom: 60px;
+  }
+
   &__title {
     margin-bottom: 62px;
+
+    @include big-desktop {
+      margin-bottom: 50px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
 
     span {
       color: var(--siniy1);
@@ -11,6 +27,14 @@
 
   &__desc {
     margin-bottom: 60px;
+
+    @include big-desktop {
+      margin-bottom: 50px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
 
     span {
       font-weight: 500;
@@ -21,6 +45,18 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
+
+    @include big-desktop {
+      grid-template-columns: repeat(10, 1fr);
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
 
@@ -33,7 +69,15 @@
     margin-bottom: 8px;
     transition: border-color .2s ease-out;
 
+    @include big-desktop {
+      height: 50px;
+    }
 
+    @include small-tablet {
+      height: 40px;
+      padding: 6px;
+      border-radius: 12px;
+    }
 
     div {
       width: 100%;
@@ -237,5 +281,13 @@
     line-height: 156%;
     text-align: center;
     color: var(--chernyy);
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 13px;
+    }
   }
 }

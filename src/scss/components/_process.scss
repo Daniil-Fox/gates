@@ -3,19 +3,53 @@
   border-radius: 80px;
   background: var(--siniy2);
 
+  @include big-desktop {
+    padding: 80px 0;
+  }
+
+  @include tablet {
+    padding: 60px 0;
+    border-radius: 40px;
+  }
+
   &__title {
     color: var(--belyy);
     margin-bottom: 60px;
+
+    @include big-desktop {
+      margin-bottom: 50px;
+    }
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+
+    @include small-tablet {
+      display: flex;
+      gap: 0;
+    }
+
+    .swiper-slide {
+      width: auto;
+    }
   }
 }
 
 .process-item {
+  @include small-tablet {
+    width: 400px;
+  }
+
+  @include mobile {
+    width: 260px;
+  }
+
   &__video {
     height: 300px;
     position: relative;
@@ -23,13 +57,25 @@
     overflow: hidden;
     margin-bottom: 30px;
 
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      height: 200px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      height: 146px;
+    }
+
     video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-
-
   }
 
   &__cover {
@@ -53,6 +99,19 @@
     border-radius: 15px;
     box-shadow: 0 14px 35px 0 rgba(11, 131, 242, 0.3);
     background: var(--siniy1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    svg {
+      width: 50%;
+      height: 50%;
+    }
   }
 
   &__name {
@@ -60,5 +119,13 @@
     font-size: 22px;
     line-height: 145%;
     color: var(--belyy);
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+    }
   }
 }

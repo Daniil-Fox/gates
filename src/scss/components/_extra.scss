@@ -4,18 +4,61 @@
   border-radius: 80px;
   margin-bottom: 140px;
 
+  @include big-desktop {
+    padding: 80px 0;
+  }
+
+  @include tablet {
+    padding: 60px 0;
+    border-radius: 40px;
+  }
+
   &__title {
     margin-bottom: 62px;
+
+    @include big-desktop {
+      margin-bottom: 50px;
+    }
   }
 
   &__container {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 340px;
+    grid-auto-rows: 340px;
+
+    @include tablet {
+      grid-template-rows: 280px;
+      grid-auto-rows: 280px;
+    }
+
+    @include small-tablet {
+      grid-template-rows: 280px 280px;
+      grid-auto-rows: 280px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile {
+      grid-template-rows: 120px 120px;
+      grid-auto-rows: 120px;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   .products__item {
     grid-row: unset !important;
     grid-column: 1 span !important;
+
+    @include mobile {
+      padding: 20px;
+    }
+
+    .prod-item {
+      &__title {
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+    }
 
     &:nth-child(1) {
       .prod-item__image {
@@ -27,6 +70,12 @@
         img {
           object-fit: contain;
         }
+
+        @include mobile {
+          top: 40px;
+          width: 156px;
+          height: 121px;
+        }
       }
     }
 
@@ -34,12 +83,33 @@
       .prod-item__images {
         left: 50px;
         top: -25px;
+
+        @include tablet {
+          top: unset;
+          bottom: -60px;
+        }
+
+        @include mobile {
+          bottom: unset;
+          top: 40px;
+        }
+      }
+
+      .prod-item__image {
+        @include mobile {
+          width: 200px;
+          height: 150px;
+        }
       }
     }
 
     &:nth-child(3) {
       .prod-item__images {
         left: 50px;
+
+        @include mobile {
+          top: 0px;
+        }
       }
     }
 
@@ -47,20 +117,33 @@
       .prod-item__images {
         top: 0;
         left: 200px;
-      }
 
-      .prod-item__image {
-        width: 100%;
+        @include big-desktop {
+          height: 120%;
+          left: 120px;
+        }
+
+        .prod-item__image {
+          width: 100%;
+        }
       }
     }
+
+    .prod-item {
+      background-color: var(--belyy);
+      mix-blend-mode: unset;
+
+      @include hover {
+        background-color: var(--siniy1);
+      }
+    }
+
+
   }
 
-  .prod-item {
-    background-color: var(--belyy);
-    mix-blend-mode: unset;
-
-    @include hover {
-      background-color: var(--siniy1);
+  .products__item:nth-child(3) .prod-item__image {
+    @include tablet {
+      top: 50px;
     }
   }
 }

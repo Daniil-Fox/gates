@@ -165,6 +165,10 @@ a {
   line-height: 115%;
   color: var(--siniy2);
 
+  span {
+    color: var(--siniy1);
+  }
+
   @include big-desktop {
     font-size: 48px;
   }
@@ -184,6 +188,18 @@ a {
   font-size: 22px;
   line-height: 145%;
   color: var(--chernyy);
+
+  @include big-desktop {
+    font-size: 20px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include small-tablet {
+    font-size: 16px;
+  }
 }
 
 .input {
@@ -240,4 +256,12 @@ a {
       }
     }
   }
+}
+
+.desc2 {
+  margin: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 156%;
+  color: var(--chernyy);
 }

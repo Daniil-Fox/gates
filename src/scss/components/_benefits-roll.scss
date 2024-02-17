@@ -1,0 +1,211 @@
+.benefits-roll {
+  border-radius: 80px;
+  background: var(--svetlo-siniy);
+  padding: 140px 0;
+
+  @include big-desktop {
+    padding: 80px 0;
+  }
+
+  @include tablet {
+    padding: 60 0px;
+    border-radius: 60px;
+  }
+
+  @include small-tablet {
+    padding: 40px 0;
+    border-radius: 40px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  &__content {
+    grid-column: 5 span;
+
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+  }
+
+  &__items {
+    grid-column: 7 / 6 span;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+  }
+
+  &__title {
+    margin-bottom: 66px;
+
+    @include big-desktop {
+      margin-bottom: 50px;
+    }
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
+
+    span {
+      color: var(--siniy1);
+    }
+  }
+
+  &__desc {
+    margin-bottom: 66px;
+    font-size: 18px;
+    line-height: 156%;
+
+    @include big-desktop {
+      margin-bottom: 50px;
+    }
+
+    @include tablet {
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 32px;
+      font-size: 13px;
+    }
+  }
+
+  &__extra {
+    padding: 40px 50px;
+    border-radius: 40px;
+    background-color: var(--belyy);
+
+    @include tablet {
+      padding: 30px;
+      border-radius: 30px;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 156%;
+      color: var(--chernyy);
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      @include small-tablet {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__item {
+    padding: 40px 50px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    border: 2px solid var(--belyy);
+    border-radius: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 46px;
+
+      @include tablet {
+        margin-bottom: 20px;
+      }
+
+      @include small-tablet {
+        margin-bottom: 8px;
+      }
+    }
+
+    @include big-desktop {
+      padding: 40px;
+    }
+
+    @include tablet {
+      padding: 30px;
+      border-radius: 30px;
+      gap: 16px;
+    }
+
+    @include small-tablet {
+      gap: 12px;
+    }
+  }
+
+  &__icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+
+    @include big-desktop {
+      width: 44px;
+      height: 44px;
+    }
+
+    @include small-tablet {
+      width: 40px;
+      height: 40px;
+    }
+
+    svg {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 145%;
+    color: var(--chernyy);
+
+    @include big-desktop {
+      margin-bottom: 20px;
+    }
+
+    @include tablet {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--chernyy);
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 13px;
+    }
+  }
+}

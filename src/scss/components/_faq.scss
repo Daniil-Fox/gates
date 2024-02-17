@@ -1,14 +1,49 @@
 .faq {
   padding: 140px 0;
+  border-top: 2px solid var(--svetlo-siniy);
 
-  &__title {
-    margin-bottom: 60px;
+  @include big-desktop {
+    padding: 80px 0;
   }
+
+  @include small-tablet {
+    padding: 60px 0;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title {}
 
   &__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    align-items: flex-start;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__slider {
+    display: none;
+
+    .swiper-slide {
+      width: auto;
+    }
+
+    @include small-tablet {
+      display: block;
+    }
   }
 
   &__header {
@@ -27,6 +62,15 @@
       border-right: 1px solid var(--siniy1);
       border-bottom: 1px solid var(--siniy1);
       transition: transform .3s ease-out;
+
+      @include small-tablet {
+        position: absolute;
+        top: 10px;
+        transform-origin: center;
+        right: 22px;
+        width: 8px;
+        height: 8px;
+      }
     }
   }
 
@@ -42,6 +86,10 @@
     line-height: 145%;
     color: var(--chernyy);
 
+    @include big-desktop {
+      font-size: 18px;
+    }
+
     &::before {
       content: attr(data-faq);
       display: flex;
@@ -51,7 +99,7 @@
       height: 42px;
       background: var(--siniy1);
       border-radius: 15px;
-
+      flex-shrink: 0;
 
       font-family: var(--font-family);
       font-weight: 500;
@@ -59,6 +107,20 @@
       line-height: 145%;
       text-align: center;
       color: var(--belyy);
+
+      @include small-tablet {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+        line-height: 144%;
+        border-radius: 8px;
+      }
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 
@@ -78,6 +140,15 @@
       font-size: 18px;
       line-height: 156%;
       color: var(--chernyy);
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      @include small-tablet {
+        font-size: 13px;
+        line-height: 154%;
+      }
     }
   }
 
@@ -86,6 +157,56 @@
     border-radius: 40px;
     background: var(--svetlo-siniy);
     padding: 35px 48px 35px 40px;
+
+    @include small-tablet {
+      width: 260px;
+      padding: 30px;
+    }
+
+    &--empty {
+      opacity: 0;
+      display: none;
+
+      @include small-tablet {
+        display: none;
+      }
+    }
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 5;
+    }
+
+    &:nth-child(4) {
+      order: 2;
+    }
+
+    &:nth-child(5) {
+      order: 4;
+    }
+
+    &:nth-child(6) {
+      order: 6;
+    }
+
+    &:nth-child(7) {
+      order: 7;
+    }
+
+    &:nth-child(8) {
+      order: 8;
+    }
+
+    @include big-desktop {
+      padding: 30px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 20px;

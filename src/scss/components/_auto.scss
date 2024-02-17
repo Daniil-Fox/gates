@@ -5,6 +5,16 @@
   position: relative;
   overflow: hidden;
 
+  @include tablet {
+    padding: 60px 20px;
+    padding-bottom: 0;
+    margin: 0 20px;
+  }
+
+  @include small-tablet {
+    padding: 44px 30px 0;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -15,6 +25,10 @@
     height: 400px;
     border-radius: 100%;
     background-color: var(--belyy);
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__image {
@@ -22,6 +36,28 @@
     height: 70%;
     bottom: 0;
     right: 130px;
+
+    @include big-desktop {
+      right: 50px;
+      height: 50%;
+    }
+
+    @include tablet {
+      position: relative;
+      height: 300px;
+      width: auto;
+      grid-column: 1 span;
+      justify-self: flex-end;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: 0;
+      right: 0;
+      justify-self: flex-end;
+    }
 
     img {
       height: 100%;
@@ -31,20 +67,40 @@
 
   &__title {
     margin-bottom: 60px;
+
+    @include big-desktop {
+      margin-bottom: 50px;
+    }
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__content {
     grid-column: 7 span;
+
+    @include tablet {
+      grid-column: 1 span;
+    }
   }
 
   &__list {
     margin-bottom: 60px;
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
   }
 
   &__item {
@@ -58,6 +114,15 @@
     line-height: 156%;
     color: var(--chernyy);
 
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      gap: 12px;
+      font-size: 13px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 12px;
     }
@@ -69,16 +134,31 @@
       height: 40px;
       border-radius: 12px;
       background-color: var(--belyy);
-      background-image: url('./../img/check-green.svg');
+      background-image: url("./../img/check-green.svg");
       background-position: center center;
       background-size: 24px 24px;
       background-repeat: no-repeat;
+      flex-shrink: 0;
+
+      @include mobile {
+        width: 32px;
+        height: 32px;
+        background-size: 16px 16px;
+      }
     }
   }
 
   &__desc {
     max-width: 620px;
     margin-bottom: 60px;
+
+    @include big-desktop {
+      margin-bottom: 50px;
+    }
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
   }
 
   &__order {
@@ -87,10 +167,30 @@
     align-items: center;
     gap: 20px;
     max-width: 540px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__btn {
-    padding: 30px 60px;
+    padding: 24px 60px;
+
+    @include tablet {
+      padding: 21px 48px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: 30px;
+      text-align: center;
+      border-radius: 15px;
+    }
   }
 
   &__price {
@@ -99,11 +199,23 @@
     line-height: 156%;
     color: var(--chernyy);
 
+    @include mobile {
+      font-size: 13px;
+    }
+
     span {
       font-weight: 400;
       font-size: 32px;
       line-height: 125%;
       color: var(--siniy1);
+
+      @include tablet {
+        font-size: 24px;
+      }
+
+      @include mobile {
+        font-size: 22px;
+      }
     }
   }
 }

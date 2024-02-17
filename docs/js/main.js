@@ -200,14 +200,14 @@ dropdownMini.forEach(el => {
   \**********************************/
 /***/ (() => {
 
-const faqItems = document.querySelectorAll('.faq__item');
+const faqItems = document.querySelectorAll(".faq__item");
 if (faqItems && faqItems.length > 0) {
   faqItems.forEach(el => {
-    const btn = el.querySelector('.faq__header');
-    btn.addEventListener('click', e => {
-      const content = el.querySelector('.faq__content');
-      const isActive = el.classList.toggle('active');
-      content.style.maxHeight = isActive ? content.scrollHeight + 'px' : null;
+    const btn = el.querySelector(".faq__header");
+    btn?.addEventListener("click", e => {
+      const content = el.querySelector(".faq__content");
+      const isActive = el.classList.toggle("active");
+      content.style.maxHeight = isActive ? content.scrollHeight + "px" : null;
     });
   });
 }
@@ -258,7 +258,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
     let swiper;
     breakpoint = window.matchMedia(breakpoint);
@@ -276,22 +276,38 @@ window.addEventListener('DOMContentLoaded', () => {
         return;
       }
     };
-    breakpoint.addEventListener('change', checker);
+    breakpoint.addEventListener("change", checker);
     checker();
   };
   const someFunc = instance => {
     if (instance) {
-      instance.on('slideChange', function (e) {
-        console.log('*** mySwiper.activeIndex', instance.activeIndex);
+      instance.on("slideChange", function (e) {
+        console.log("*** mySwiper.activeIndex", instance.activeIndex);
       });
     }
   };
-  resizableSwiper('(max-width: 768px)', '.objects__slider', {
-    slidesPerView: 'auto',
+  resizableSwiper("(max-width: 768px)", ".objects__slider", {
+    slidesPerView: "auto",
     spaceBetween: 8
   });
-  resizableSwiper('(max-width: 768px)', '.news-sec__slider', {
-    slidesPerView: 'auto',
+  resizableSwiper("(max-width: 768px)", ".news-sec__slider", {
+    slidesPerView: "auto",
+    spaceBetween: 8
+  });
+  resizableSwiper("(max-width: 768px)", ".steps__slider", {
+    slidesPerView: "auto",
+    spaceBetween: 8
+  });
+  resizableSwiper("(max-width: 768px)", ".process__slider", {
+    slidesPerView: "auto",
+    spaceBetween: 8
+  });
+  resizableSwiper("(max-width: 768px)", ".faq__slider", {
+    slidesPerView: "auto",
+    spaceBetween: 8
+  });
+  resizableSwiper("(max-width: 768px)", ".gate-chars__slider", {
+    slidesPerView: "auto",
     spaceBetween: 8
   });
 });

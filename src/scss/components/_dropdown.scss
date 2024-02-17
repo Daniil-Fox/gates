@@ -92,6 +92,10 @@
     transition: color .3s ease-out, margin-bottom .3s ease-out;
     will-change: margin-bottom;
 
+    a {
+      color: inherit;
+    }
+
     @include hover {
       color: var(--siniy1);
     }
@@ -206,6 +210,12 @@
 
   @include small-tablet {
     display: block;
+  }
+
+  &__block {
+    @include small-tablet {
+      margin-bottom: 26px;
+    }
   }
 
   &__capture {
