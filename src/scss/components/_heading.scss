@@ -1,0 +1,28 @@
+.heading {
+  background-color: var(--siniy1);
+  padding-top: 45px;
+  padding-bottom: 57px;
+  border-radius: 40px;
+
+  .breadcrumbs {
+    margin-bottom: 30px;
+
+    li {
+      a {
+        color: var(--belyy);
+      }
+
+      &::after {
+        background-image: url('./../img/right-arr-wh.svg');
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 115%;
+    color: var(--belyy);
+  }
+}

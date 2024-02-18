@@ -1,0 +1,15 @@
+.documents {
+  padding-bottom: 140px;
+
+  .info-slider {
+    &__slide {
+      width: 260px;
+    }
+
+    &__image {
+      height: 368px;
+      border-radius: 22px;
+      margin-bottom: 30px;
+    }
+  }
+}

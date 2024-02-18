@@ -66,3 +66,31 @@ window.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 8,
   });
 });
+
+new Swiper(".points__slider", {
+  slidesPerView: "auto",
+});
+new Swiper(".team__slider", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  navigation: {
+    prevEl: ".team-btn-prev",
+    nextEl: ".team-btn-next",
+  },
+});
+new Swiper(".documents__slider", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  navigation: {
+    prevEl: ".doc-btn-prev",
+    nextEl: ".doc-btn-next",
+  },
+});
+new Swiper(".prod__slider", {
+  slidesPerView: 1,
+  loop: true,
+  navigation: {
+    prevEl: ".prod__btn--prev",
+    nextEl: ".prod__btn--next",
+  },
+});

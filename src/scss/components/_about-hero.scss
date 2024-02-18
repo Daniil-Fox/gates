@@ -1,0 +1,35 @@
+.about-hero {
+  padding-top: 140px;
+  padding-bottom: 140px;
+
+  &__desc {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    line-height: 1;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+
+  &__content {
+    grid-column: 5 span;
+  }
+
+  &__image {
+    grid-column: 7 / 6 span;
+    padding-right: 0;
+
+
+    .about-play {
+      right: unset;
+      left: 0;
+      width: 30%;
+    }
+  }
+}

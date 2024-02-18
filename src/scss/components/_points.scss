@@ -1,0 +1,129 @@
+.points {
+  padding: 140px 0;
+
+  &__slider {
+    overflow: visible;
+    padding: 0 calc((100% - var(--container-width)) / 2);
+  }
+
+  &__container {
+
+
+    .swiper-slide {
+      width: auto;
+      height: auto;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.point {
+  width: 520px;
+  height: 100%;
+
+  @include hover {
+    .point {
+      &__figure {
+        span {
+          color: var(--siniy1);
+        }
+
+        &-square {
+          &::before {
+            background-color: var(--zelenyy);
+          }
+        }
+      }
+
+      &__images {
+        filter: saturate(1);
+      }
+
+    }
+  }
+
+  &__figure {
+    position: relative;
+    display: flex;
+    padding-bottom: 73px;
+    border-bottom: 2px solid var(--svetlo-siniy);
+
+    span {
+      font-weight: 700;
+      font-size: 300px;
+      line-height: 13%;
+      color: var(--svetlo-siniy);
+      transition: color .3s ease-out;
+    }
+
+    &-square {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      left: 0;
+      bottom: 0;
+      transform: translateY(50%);
+      background-color: var(--svetlo-siniy);
+      border-radius: 12px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+        border-radius: 6px;
+
+        background-color: var(--belyy);
+        transition: background-color .3s ease-out;
+      }
+    }
+  }
+
+
+  &__images {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    filter: saturate(0);
+
+    transition: filter .3s ease-out;
+  }
+
+  &__img {
+    &:nth-child(1) {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 140px;
+      height: 140px;
+      border-radius: 40px;
+      overflow: hidden;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border: 8px solid var(--belyy);
+      border-radius: 22px;
+      right: 0;
+      bottom: 0;
+
+      img {
+        border-radius: 22px;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 73px;
+    max-width: 400px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+}

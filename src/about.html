@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/about-heading.html')
+      @include('partials/about-hero.html')
+      @include('partials/points.html')
+      @include('partials/prod.html')
+      @include('partials/team.html')
+      @include('partials/documents.html')
+      @include('partials/requisites.html')
+
+      @include('partials/contacts.html')
+      @include('partials/modal.html')
+    </main>
+    @include('partials/footer.html')
+  </div>
+
+  <script>
+    initMap();
+
+    async function initMap() {
+      // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+      await ymaps3.ready;
+
+      const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer } = ymaps3;
+      const { YMapDefaultMarker } = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
+      // Иницилиазируем карту
+      const map = new YMap(
+        // Передаём ссылку на HTMLElement контейнера
+        document.getElementById('map'),
+
+        // Передаём параметры инициализации карты
+        {
+          location: {
+            // Координаты центра карты
+            center: [37.588099, 55.692480],
+
+            // Уровень масштабирования
+            zoom: 16
+          }
+        },
+        [
+          new YMapDefaultSchemeLayer({}),
+          new YMapDefaultFeaturesLayer({})
+        ]
+      );
+
+      const marker = new YMapDefaultMarker({
+        coordinates: [37.588099, 55.692480],
+        color: '#FF2400'
+      });
+      map.addChild(marker);
+    }
+  </script>
+</body>
+
+</html>

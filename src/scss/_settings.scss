@@ -265,3 +265,49 @@ a {
   line-height: 156%;
   color: var(--chernyy);
 }
+
+.title4 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 125%;
+  color: var(--chernyy);
+
+  span {
+    color: var(--siniy1);
+  }
+}
+
+.list {
+  li {
+    position: relative;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--chernyy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      background: var(--zelenyy);
+      border-radius: 12px;
+
+      background-image: url('./../img/check.svg');
+      background-position: center center;
+      background-size: 50%;
+      background-repeat: no-repeat;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.team {
+  padding-bottom: 140px;
+}

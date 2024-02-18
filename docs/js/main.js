@@ -16,6 +16,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_modal__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_faq__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/faq */ "./src/js/components/faq.js");
 /* harmony import */ var _components_faq__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_faq__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_requisites__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/requisites */ "./src/js/components/requisites.js");
+/* harmony import */ var _components_requisites__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_requisites__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -247,6 +250,35 @@ modalFormWindow.addEventListener('click', e => {
 
 /***/ }),
 
+/***/ "./src/js/components/requisites.js":
+/*!*****************************************!*\
+  !*** ./src/js/components/requisites.js ***!
+  \*****************************************/
+/***/ (() => {
+
+const reqItems = document.querySelectorAll(".req-item");
+reqItems.forEach(req => {
+  const copyBtn = req.querySelector(".req-item__btn");
+  const valueCopy = req.querySelector(".req-item__value").textContent;
+  const notify = req.querySelector(".req-item__notify");
+  copyBtn.addEventListener("click", e => {
+    navigator.clipboard.writeText(valueCopy).then(function () {
+      notify.style.opacity = 1;
+      notify.style.zIndex = 1;
+      notify.style.transform = "translate(50%, -120%)";
+      setTimeout(() => {
+        notify.style.opacity = null;
+        notify.style.zIndex = null;
+        notify.style.transform = null;
+      }, 700);
+    }).catch(function (error) {
+      console.error("Error:", error);
+    });
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/sliders.js":
 /*!**************************************!*\
   !*** ./src/js/components/sliders.js ***!
@@ -310,6 +342,33 @@ window.addEventListener("DOMContentLoaded", () => {
     slidesPerView: "auto",
     spaceBetween: 8
   });
+});
+new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".points__slider", {
+  slidesPerView: "auto"
+});
+new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".team__slider", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  navigation: {
+    prevEl: ".team-btn-prev",
+    nextEl: ".team-btn-next"
+  }
+});
+new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".documents__slider", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
+  navigation: {
+    prevEl: ".doc-btn-prev",
+    nextEl: ".doc-btn-next"
+  }
+});
+new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".prod__slider", {
+  slidesPerView: 1,
+  loop: true,
+  navigation: {
+    prevEl: ".prod__btn--prev",
+    nextEl: ".prod__btn--next"
+  }
 });
 
 /***/ }),
