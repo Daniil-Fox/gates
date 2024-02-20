@@ -2,29 +2,67 @@
   padding-top: 140px;
   padding-bottom: 140px;
 
+  @include big-desktop {
+    padding: 80px 0;
+  }
+
+  @include tablet {
+    padding: 40px 0;
+  }
+
   &__desc {
     margin-bottom: 60px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
   }
 
   &__title {
     margin-bottom: 60px;
     line-height: 1;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
   }
 
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
+    align-items: center;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
   }
 
   &__content {
     grid-column: 5 span;
+
+    @include tablet {
+      grid-column: 1 span;
+    }
   }
 
   &__image {
     grid-column: 7 / 6 span;
     padding-right: 0;
 
+    @include tablet {
+      grid-column: 1 span;
+      margin: 0 auto;
+    }
 
     .about-play {
       right: unset;

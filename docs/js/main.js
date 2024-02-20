@@ -265,7 +265,7 @@ reqItems.forEach(req => {
     navigator.clipboard.writeText(valueCopy).then(function () {
       notify.style.opacity = 1;
       notify.style.zIndex = 1;
-      notify.style.transform = "translate(50%, -120%)";
+      notify.style.transform = window.matchMedia("(max-width: 768px").matches ? "translate(0%, -120%)" : "translate(50%, -120%)";
       setTimeout(() => {
         notify.style.opacity = null;
         notify.style.zIndex = null;
@@ -368,6 +368,22 @@ new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".prod__slider", {
   navigation: {
     prevEl: ".prod__btn--prev",
     nextEl: ".prod__btn--next"
+  }
+});
+new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".ready-buttons__slider", {
+  slidesPerView: "auto",
+  spaceBetween: 8
+});
+const galleryThumbs = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".item-hero__thumbs", {
+  slidesPerGroup: 1,
+  slidesPerView: 9,
+  slidesPerColumn: 3,
+  noSwiping: false
+});
+const galleryTop = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".item-hero__slider", {
+  slidesPerView: "auto",
+  thumbs: {
+    swiper: galleryThumbs
   }
 });
 

@@ -1,0 +1,132 @@
+.item-hero {
+  &__content {
+    padding: 40px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  &__slider {
+    height: 462px;
+    margin-bottom: 8px;
+    border-radius: 22px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+
+    min-height: 0;
+    min-width: 0;
+
+    .swiper-slide {
+      box-sizing: border-box;
+      width: auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__thumbs {
+    .swiper-wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 150px);
+      grid-auto-rows: 150px;
+      gap: 8px;
+    }
+
+    .swiper-slide {
+      border-radius: 22px;
+      overflow: hidden;
+      width: 100% !important;
+      border: 2px solid transparent;
+      transition: border-color .3s ease-out;
+
+      &-active {
+        border-color: var(--siniy1);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.item-chars {
+  &__list {
+    margin-bottom: 60px;
+  }
+
+  &__item {
+    padding: 24px 30px;
+    border: 2px solid var(--svetlo-siniy);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--chernyy);
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__capture {
+    font-weight: 300;
+  }
+
+  &__value {
+    font-weight: 500;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+
+  &__points {
+    padding-bottom: 60px;
+  }
+
+
+}
+
+
+.item-term {
+  border-radius: 22px;
+  background: var(--svetlo-siniy);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__capture {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 171%;
+    color: var(--chernyy);
+
+    span {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 145%;
+    }
+  }
+
+  &__price {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 125%;
+    text-align: right;
+    color: var(--siniy1);
+  }
+}

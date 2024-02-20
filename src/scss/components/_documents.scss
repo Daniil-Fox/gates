@@ -1,13 +1,39 @@
 .documents {
   padding-bottom: 140px;
 
+  @include tablet {
+    padding-bottom: 80px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 60px;
+  }
+
   .info-slider {
     &__slide {
       width: 260px;
+
+      @include small-tablet {
+        width: 200px;
+      }
+
+      @include mobile {
+        width: 130px;
+      }
     }
 
     &__image {
       height: 368px;
+      border-radius: 15px;
+
+      @include small-tablet {
+        height: 280px;
+      }
+
+      @include mobile {
+        height: 184px;
+      }
+
       border-radius: 22px;
       margin-bottom: 30px;
     }

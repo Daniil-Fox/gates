@@ -1,0 +1,93 @@
+.pagination {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    border: 2px solid var(--svetlo-siniy);
+    border-radius: 15px;
+
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include small-tablet {
+      width: 50px;
+      height: 50px;
+    }
+
+    &:nth-of-type(2) {
+      svg {
+        transform: rotateY(180deg);
+      }
+
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      fill: #1c1c1c;
+      transition: fill .3s ease-out;
+    }
+
+    @include hover {
+      svg {
+        fill: var(--siniy1);
+      }
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    counter-reset: counter 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    li {
+      cursor: pointer;
+      counter-increment: counter 1;
+      border: 2px solid var(--svetlo-siniy);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      transition: border-color .3s ease-out, color .3s ease-out;
+
+      @include small-tablet {
+        width: 50px;
+        height: 50px;
+      }
+
+      @include hover {
+        &::before {
+          color: var(--siniy1)
+        }
+      }
+
+      &.active {
+        border-color: var(--siniy1);
+      }
+
+      &::before {
+        content: counter(counter);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 156%;
+        color: var(--chernyy);
+      }
+    }
+  }
+}

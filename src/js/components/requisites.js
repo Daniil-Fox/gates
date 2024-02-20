@@ -11,7 +11,9 @@ reqItems.forEach((req) => {
       .then(function () {
         notify.style.opacity = 1;
         notify.style.zIndex = 1;
-        notify.style.transform = "translate(50%, -120%)";
+        notify.style.transform = window.matchMedia("(max-width: 768px").matches
+          ? "translate(0%, -120%)"
+          : "translate(50%, -120%)";
 
         setTimeout(() => {
           notify.style.opacity = null;

@@ -1,6 +1,10 @@
 .info-slider {
   padding: 0 calc((100% - var(--container-width)) / 2);
 
+  @include tablet {
+    padding: 0 20px;
+  }
+
   .swiper-slide {
     width: auto;
   }
@@ -10,12 +14,20 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 60px;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
   }
 
   &__control {
     display: flex;
     align-items: center;
     gap: 8px;
+
+    @include small-tablet {
+      display: none;
+    }
   }
 
   &__btn {
@@ -43,10 +55,23 @@
   &__slide {
     width: 400px;
     height: 100%;
+
+    @include small-tablet {
+      width: 300px;
+    }
+
+    @include mobile {
+      width: 260px;
+    }
   }
 
   &__title {
     margin-bottom: 30px;
+    font-weight: 500;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__desc {
@@ -55,6 +80,14 @@
     font-size: 18px;
     line-height: 156%;
     color: var(--chernyy);
+
+    @include small-tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 13px;
+    }
   }
 
   &__image {
@@ -62,6 +95,15 @@
     border-radius: 40px;
     overflow: hidden;
     margin-bottom: 40px;
+
+    @include small-tablet {
+      height: 440px;
+      margin-bottom: 24px;
+    }
+
+    @include mobile {
+      height: 338px;
+    }
 
     img {
       height: 100%;

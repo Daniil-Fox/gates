@@ -94,3 +94,21 @@ new Swiper(".prod__slider", {
     nextEl: ".prod__btn--next",
   },
 });
+
+new Swiper(".ready-buttons__slider", {
+  slidesPerView: "auto",
+  spaceBetween: 8,
+});
+const galleryThumbs = new Swiper(".item-hero__thumbs", {
+  slidesPerGroup: 1,
+  slidesPerView: 9,
+  slidesPerColumn: 3,
+  noSwiping: false,
+});
+
+const galleryTop = new Swiper(".item-hero__slider", {
+  slidesPerView: "auto",
+  thumbs: {
+    swiper: galleryThumbs,
+  },
+});
