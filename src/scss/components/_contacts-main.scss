@@ -1,0 +1,132 @@
+.contacts-main {
+  &__container {
+    padding: 140px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    @include tablet {
+      padding: 80px 20px;
+    }
+
+    @include small-tablet {
+      padding: 40px 0;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  &__buttons {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__btn {
+    background: none;
+    border: 2px solid var(--svetlo-siniy);
+    box-shadow: none;
+    color: var(--chernyy);
+    transition: color .3s ease-out, box-shadow .3s ease-out, background .3s ease-out;
+
+    &.active {
+      box-shadow: 0 14px 35px 0 rgba(11, 131, 242, 0.3);
+      background: var(--siniy1);
+      color: var(--belyy);
+
+      @include hover {
+        color: currentColor;
+      }
+    }
+
+    @include hover {
+      color: var(--siniy1);
+    }
+  }
+
+  &__data {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    .contacts__data {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 60px;
+
+        @include tablet {
+          margin-bottom: 40px;
+        }
+
+        @include small-tablet {
+          margin-bottom: 32px;
+        }
+      }
+    }
+
+    .contacts__value {
+      display: block;
+      text-align: left;
+      margin-bottom: 16px;
+
+      @include small-tablet {
+        margin-bottom: 8px;
+      }
+
+
+    }
+
+    .contacts__capture {
+      display: block;
+      text-align: left;
+      margin: 0;
+
+      @include small-tablet {
+        font-size: 16px;
+      }
+
+      a {
+        font-size: 32px;
+        color: inherit;
+
+        @include big-desktop {
+          font-size: 26px;
+        }
+
+        @include tablet {
+          font-size: 22px;
+        }
+
+        @include small-tablet {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .map {
+    border-radius: 40px;
+    overflow: hidden;
+
+    @include small-tablet {
+      height: 400px;
+    }
+
+    @include mobile {
+      height: 220px;
+    }
+  }
+
+}

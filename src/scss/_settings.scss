@@ -189,6 +189,14 @@ a {
   line-height: 145%;
   color: var(--chernyy);
 
+  span {
+    color: var(--siniy1);
+
+    &.bold {
+      font-weight: 500;
+    }
+  }
+
   @include big-desktop {
     font-size: 20px;
   }
@@ -230,17 +238,23 @@ a {
   display: flex;
   align-items: center;
   gap: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &>li {
     display: flex;
     align-items: center;
     gap: 8px;
 
+    text-overflow: ellipsis;
+
     &>a {
       font-weight: 400;
       font-size: 14px;
       line-height: 171%;
       color: var(--chernyy);
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     &:not(:last-child) {
@@ -253,6 +267,7 @@ a {
         background-position: center center;
         background-size: contain;
         background-repeat: no-repeat;
+        flex-shrink: 0;
       }
     }
   }
@@ -320,7 +335,7 @@ a {
       height: 40px;
       background: var(--zelenyy);
       border-radius: 12px;
-
+      flex-shrink: 0;
       background-image: url('./../img/check.svg');
       background-position: center center;
       background-size: 50%;
@@ -348,4 +363,44 @@ a {
   @include tablet {
     padding-bottom: 60px;
   }
+}
+
+.play-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  box-shadow: 0 14px 35px 0 rgba(11, 131, 242, 0.3);
+  background: var(--siniy1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.control {
+
+  position: absolute;
+  padding-top: 40px;
+  padding-left: 40px;
+  border-top-left-radius: 40px;
+  z-index: 6;
+  right: 0;
+  bottom: 0;
+  background-color: var(--belyy);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include small-tablet {
+    padding-top: 20px;
+    padding-left: 10px;
+
+    border-top-left-radius: 24px;
+  }
+
 }

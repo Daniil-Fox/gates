@@ -59,6 +59,7 @@
       width: 54px;
       height: 54px;
       object-fit: contain;
+      flex-shrink: 0;
 
       @include big-desktop {
         width: 42px;

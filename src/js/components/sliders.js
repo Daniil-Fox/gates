@@ -1,6 +1,3 @@
-import Swiper, { Navigation, Pagination } from "swiper";
-Swiper.use([Navigation, Pagination]);
-
 window.addEventListener("DOMContentLoaded", () => {
   const resizableSwiper = (
     breakpoint,
@@ -100,15 +97,28 @@ new Swiper(".ready-buttons__slider", {
   spaceBetween: 8,
 });
 const galleryThumbs = new Swiper(".item-hero__thumbs", {
-  slidesPerGroup: 1,
   slidesPerView: 9,
-  slidesPerColumn: 3,
-  noSwiping: false,
+
+  breakpoints: {
+    320: {
+      slidesPerView: "auto",
+    },
+    1025: {
+      slidesPerView: 9,
+      slidesPerGroup: 1,
+      slidesPerColumn: 3,
+      slideToClickedSlide: true,
+      watchSlidesProgress: true,
+    },
+  },
 });
 
 const galleryTop = new Swiper(".item-hero__slider", {
-  slidesPerView: "auto",
+  slidesPerView: 1,
   thumbs: {
     swiper: galleryThumbs,
+  },
+  controller: {
+    control: galleryThumbs,
   },
 });

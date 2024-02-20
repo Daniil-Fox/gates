@@ -107,9 +107,25 @@
 }
 
 .news-item {
+  display: block;
   border: 2px solid var(--svetlo-siniy);
   border-radius: 40px;
   padding: 50px;
+  position: relative;
+
+  &__link {
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  @include hover {
+    .news-item__title {
+      color: var(--siniy1);
+    }
+  }
 
   @include big-desktop {
     padding: 35px;
@@ -132,6 +148,7 @@
     font-size: 22px;
     line-height: 145%;
     color: var(--chernyy);
+    transition: color .3s ease-out;
 
     @include big-desktop {
       font-size: 20px;

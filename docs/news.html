@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#111111">
+  <title>MaxGraph New Site</title>
+  <link rel="preload" href="fonts/Manrope-Bold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://api-maps.yandex.ru/v3/?apikey=8c9bb3f5-07ef-4aa2-8a70-b84bc9e8879b&lang=ru_RU"></script>
+  <script src="./swiper.min.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+
+<body class="page__body">
+  <div class="site-container">
+    <header class="header">
+  <div class="header__top header-top">
+    <div class="container header-top__container">
+      <nav class="nav header__nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item">
+            <a href="./about.html" class="nav__link">О компании</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Каталог продукции</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Новости</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Портфолио</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__city">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.00003 3.86937C7.15742 3.86937 5.65833 5.36847 5.65833 7.21108C5.65833 9.05369 7.15742 10.5528 9.00003 10.5528C10.8426 10.5528 12.3417 9.05369 12.3417 7.21108C12.3417 5.36847 10.8427 3.86937 9.00003 3.86937ZM9.00003 9.14576C7.93325 9.14576 7.06535 8.27786 7.06535 7.21108C7.06535 6.1443 7.93325 5.27639 9.00003 5.27639C10.0668 5.27639 10.9347 6.1443 10.9347 7.21108C10.9347 8.27786 10.0668 9.14576 9.00003 9.14576Z"
+            fill="#0B83F2" />
+          <path
+            d="M9.00001 0C5.02381 0 1.78894 3.2349 1.78894 7.21107V7.41041C1.78894 9.42135 2.94185 11.7647 5.21576 14.3753C6.86417 16.2679 8.48955 17.5875 8.55789 17.6427L9.00001 18L9.44214 17.6428C9.51052 17.5875 11.1359 16.2679 12.7843 14.3754C15.0581 11.7647 16.2111 9.42138 16.2111 7.41045V7.21111C16.2111 3.2349 12.9762 0 9.00001 0ZM14.8041 7.41045C14.8041 10.8088 10.4253 14.9226 9.00001 16.1715C7.57432 14.9222 3.19596 10.8086 3.19596 7.41045V7.21111C3.19596 4.01077 5.79967 1.40706 9.00001 1.40706C12.2004 1.40706 14.8041 4.01077 14.8041 7.21111V7.41045Z"
+            fill="#0B83F2" />
+        </svg>
+        <span>Самара</span>
+      </div>
+    </div>
+  </div>
+  <div class="header__bottom header-bottom">
+    <div class="container header-bottom__container">
+      <a class="header__logo">воротные<br>системы</a>
+      <div class="header-bottom__right">
+        <button class="header-bottom__btn btn-reset">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M5.5 4.4C5.5 3.79251 5.99251 3.3 6.6 3.3H20.9C21.5075 3.3 22 3.79251 22 4.4C22 5.0075 21.5075 5.5 20.9 5.5H6.6C5.99251 5.5 5.5 5.00745 5.5 4.4ZM20.9 9.9H1.1C0.492508 9.9 0 10.3926 0 11C0 11.6075 0.492508 12.1 1.1 12.1H20.9C21.5075 12.1 22 11.6075 22 11C22 10.3926 21.5075 9.9 20.9 9.9ZM20.9 16.5H11C10.3926 16.5 9.9 16.9925 9.9 17.6C9.9 18.2075 10.3926 18.7 11 18.7H20.9C21.5075 18.7 22 18.2075 22 17.6C22 16.9925 21.5075 16.5 20.9 16.5Z"
+              fill="white" />
+          </svg>
+          <span>Каталог продукции</span>
+        </button>
+        <form action="#" class="header-bottom__form">
+          <input type="text" class="header-bottom__input">
+          <button class="header-bottom__search btn-reset">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_4_149)">
+                <path
+                  d="M23.6484 21.9516L18.2021 16.5052C19.5739 14.7679 20.4 12.5805 20.4 10.2C20.4 4.57561 15.8244 0 10.2 0C4.57561 0 0 4.57561 0 10.2C0 15.8244 4.57561 20.4 10.2 20.4C12.5805 20.4 14.7679 19.5739 16.5052 18.2021L21.9516 23.6484C22.1859 23.8828 22.493 24 22.8 24C23.107 24 23.4141 23.8828 23.6484 23.6484C24.1172 23.1797 24.1172 22.4203 23.6484 21.9516ZM2.4 10.2C2.4 5.89922 5.89922 2.4 10.2 2.4C14.5008 2.4 18 5.89922 18 10.2C18 14.5008 14.5008 18 10.2 18C5.89922 18 2.4 14.5008 2.4 10.2Z"
+                  fill="#0B83F2" />
+              </g>
+              <defs>
+                <clipPath id="clip0_4_149">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </form>
+        <div class="header-bottom__tt tt">
+          <span class="tt__capture">режим работы</span>
+          <span class="tt__value">пн-пт: 8.30 — 17.00</span>
+        </div>
+        <div class="header-bottom__call phone">
+          <div class="phone__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.8 0H7.20002C4.55332 0 2.40002 2.15334 2.40002 4.8V19.2C2.40002 21.8467 4.55332 24 7.20002 24H16.8C19.4467 24 21.6 21.8467 21.6 19.2V4.8C21.6 2.15334 19.4467 0 16.8 0ZM19.2 19.2C19.2 20.5236 18.1237 21.6 16.8 21.6H7.20002C5.87637 21.6 4.80002 20.5237 4.80002 19.2V4.8C4.80002 3.47634 5.87642 2.4 7.20002 2.4H16.8C18.1237 2.4 19.2 3.47634 19.2 4.8V19.2ZM13.2 19.2C13.2 19.8627 12.6628 20.4 12 20.4C11.3373 20.4 10.8 19.8627 10.8 19.2C10.8 18.5372 11.3373 18 12 18C12.6628 18 13.2 18.5372 13.2 19.2Z"
+                fill="#0B83F2" />
+            </svg>
+          </div>
+          <div class="phone__items">
+            <a href="tel:+78992002345" class="phone__link">8 (899) 200-23-45</a>
+            <a href="tel:+78995000025" class="phone__link">8 (899) 500-00-25</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header-bottom__mob header-mob ">
+        <a href="tel:+78992002345" class="header-mob__link">
+          <span class="header-mob__cap">Ростов-на-Дону</span>
+          <span class="header-mob__tel">8 (899) 200-23-45</span>
+        </a>
+        <a href="tel:+78995000025" class="header-mob__link">
+          <span class="header-mob__cap">Таганрог</span>
+          <span class="header-mob__tel">8 (899) 500-00-25</span>
+        </a>
+        <button class="btn-reset header-mob__btn btn btn--white">Перезвонить</button>
+      </div>
+    </div>
+  </div>
+  <div class="header__dropdown dropdown container">
+    <div class="dropdown__container">
+      <div class="dropdown-mini dropdown__item">
+        <h3 class="dropdown-mini__title" data-drop-mini="gates">
+          <div class="dropdown-mini__icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 7V29" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M6.26562 7V29" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M34 7V29" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M29.7324 7V29" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M10.5332 9.20004H29.7329" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M29.7329 26.8H10.5332" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 7H6.26661" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M29.7324 7H33.999" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M10.5332 9.20004V26.8" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 29H6.26661" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M33.999 29H29.7324" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M29.7329 22.4H10.5332" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M29.7329 18H10.5332" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M29.7329 13.6H10.5332" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <a href="./gates.html">Выездные ворота</a>
+        </h3>
+        <ul class="dropdown-mini__list list-reset" data-drop-content="gates">
+          <li class="dropdown-mini__item">
+            <a href="./gates-roll.html" class="dropdown-mini__link">Откатные ворота</a>
+          </li>
+          <li class="dropdown-mini__item">
+            <a href="#" class="dropdown-mini__link">Распашные ворота</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown-mini dropdown__item">
+        <h3 class="dropdown-mini__title" data-drop-mini="visors">
+          <div class="dropdown-mini__icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 32V10.4615" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M34 10.4615V32" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M2 32H7" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M29 32H34" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M2 10.4615L18 4" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M34 10.4615L18 4" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M7.33398 32V14.7692" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M28.666 14.7692V32" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M7.33398 14.7692H28.6673" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span>Навесы</span>
+        </h3>
+        <ul class="dropdown-mini__list list-reset" data-drop-content="visors">
+          <li class="dropdown-mini__item">
+            <a href="#" class="dropdown-mini__link">Навесы из политкарбоната</a>
+          </li>
+          <li class="dropdown-mini__item">
+            <a href="#" class="dropdown-mini__link">Навесы для авто</a>
+          </li>
+          <li class="dropdown-mini__item">
+            <a href="#" class="dropdown-mini__link">Навесы из мягкой кровли</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown-mini dropdown__item">
+        <h3 class="dropdown-mini__title" data-drop-mini="fences">
+          <div class="dropdown-mini__icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.13281 7.23077V32" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M10.5332 7.23077V32" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4.13281 32H10.5328" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.8008 7.23077V32" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.1992 7.23077V32" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.8008 32H21.2008" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M25.4668 7.23077V32" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M31.8672 7.23077V32" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M25.4668 32H31.8668" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 27.6923H4.13333" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M10.5332 27.6923H14.7999" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.1992 27.6923H25.4659" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M31.8672 27.6923H34.0005" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 10.4615H4.13333" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M10.5332 10.4615H14.7999" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.1992 10.4615H25.4659" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M31.8672 10.4615H34.0005" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4.13281 7.23077C4.13281 5.44646 5.5655 4 7.33281 4C9.10012 4 10.5328 5.44646 10.5328 7.23077"
+                stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M14.8008 7.23077C14.8008 5.44646 16.2335 4 18.0008 4C19.7681 4 21.2008 5.44646 21.2008 7.23077"
+                stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M25.4668 7.23077C25.4668 5.44646 26.8995 4 28.6668 4C30.4341 4 31.8668 5.44646 31.8668 7.23077"
+                stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span>Заборы</span>
+        </h3>
+        <ul class="dropdown-mini__list list-reset" data-drop-content="fences">
+          <li class="dropdown-mini__item">
+            <a href="#" class="dropdown-mini__link">Забор из профнастила</a>
+          </li>
+          <li class="dropdown-mini__item">
+            <a href="#" class="dropdown-mini__link">Забор из евроштакетника</a>
+          </li>
+          <li class="dropdown-mini__item">
+            <a href="#" class="dropdown-mini__link">Забор жалюзи</a>
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown-mini dropdown__item">
+        <a href="#" class="dropdown-mini__title">
+          <div class="dropdown-mini__icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M34.0008 18C34.0008 15.25 30.8008 15.25 30.8008 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M34.0008 7C34.0008 9.75 30.8008 9.75 30.8008 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M34.0008 29C34.0008 26.25 30.8008 26.25 30.8008 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M34.0008 18C34.0008 20.75 30.8008 20.75 30.8008 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M27.5996 18C27.5996 15.25 30.7996 15.25 30.7996 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M27.5996 7C27.5996 9.75 30.7996 9.75 30.7996 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M27.5996 29C27.5996 26.25 30.7996 26.25 30.7996 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M27.5996 18C27.5996 20.75 30.7996 20.75 30.7996 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M27.6004 18C27.6004 15.25 24.4004 15.25 24.4004 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M27.6004 7C27.6004 9.75 24.4004 9.75 24.4004 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M27.6004 29C27.6004 26.25 24.4004 26.25 24.4004 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M27.6004 18C27.6004 20.75 24.4004 20.75 24.4004 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.1992 18C21.1992 15.25 24.3992 15.25 24.3992 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.1992 7C21.1992 9.75 24.3992 9.75 24.3992 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.1992 29C21.1992 26.25 24.3992 26.25 24.3992 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.1992 18C21.1992 20.75 24.3992 20.75 24.3992 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.2 18C21.2 15.25 18 15.25 18 12.5" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.2 7C21.2 9.75 18 9.75 18 12.5" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.2 29C21.2 26.25 18 26.25 18 23.5" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M21.2 18C21.2 20.75 18 20.75 18 23.5" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.8008 18C14.8008 15.25 18.0008 15.25 18.0008 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.8008 7C14.8008 9.75 18.0008 9.75 18.0008 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.8008 29C14.8008 26.25 18.0008 26.25 18.0008 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.8008 18C14.8008 20.75 18.0008 20.75 18.0008 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.7996 18C14.7996 15.25 11.5996 15.25 11.5996 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.7996 7C14.7996 9.75 11.5996 9.75 11.5996 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.7996 29C14.7996 26.25 11.5996 26.25 11.5996 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14.7996 18C14.7996 20.75 11.5996 20.75 11.5996 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8.40039 18C8.40039 15.25 11.6004 15.25 11.6004 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8.40039 7C8.40039 9.75 11.6004 9.75 11.6004 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8.40039 29C8.40039 26.25 11.6004 26.25 11.6004 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8.40039 18C8.40039 20.75 11.6004 20.75 11.6004 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8.39922 18C8.39922 15.25 5.19922 15.25 5.19922 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8.39922 7C8.39922 9.75 5.19922 9.75 5.19922 12.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8.39922 29C8.39922 26.25 5.19922 26.25 5.19922 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M8.39922 18C8.39922 20.75 5.19922 20.75 5.19922 23.5" stroke="#0B83F2" stroke-width="2"
+                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 18C2 15.25 5.2 15.25 5.2 12.5" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 7C2 9.75 5.2 9.75 5.2 12.5" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 29C2 26.25 5.2 26.25 5.2 23.5" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 18C2 20.75 5.2 20.75 5.2 23.5" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span>Решетки на окна</span>
+        </a>
+      </div>
+      <div class="dropdown-mini dropdown__item">
+        <a href="#" class="dropdown-mini__title">
+          <div class="dropdown-mini__icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2V34" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M7.33398 2V34" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M34 2V34" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M28.666 2V34" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M7.33398 4.13336H28.6673" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M28.6673 31.8666H7.33398" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 2H7.33333" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M28.666 2H33.9993" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M2 34H7.33333" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M33.9993 34H28.666" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M11.5996 16.9333V19.0667" stroke="#0B83F2" stroke-width="2" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <span>Калитки</span>
+        </a>
+      </div>
+    </div>
+    <div class="dropdown__container dropdown-menu__container">
+      <nav class="dropdown-menu">
+        <ul class="dropdown-menu__list list-reset">
+          <li class="dropdown-menu__item">
+            <a href="#" class="dropdown-menu__link">О компании</a>
+          </li>
+          <li class="dropdown-menu__item">
+            <a href="#" class="dropdown-menu__link">Каталог продукции</a>
+          </li>
+          <li class="dropdown-menu__item">
+            <a href="#" class="dropdown-menu__link">Новости</a>
+          </li>
+          <li class="dropdown-menu__item">
+            <a href="#" class="dropdown-menu__link">Портфолио</a>
+          </li>
+          <li class="dropdown-menu__item">
+            <a href="#" class="dropdown-menu__link">Отзывы</a>
+          </li>
+          <li class="dropdown-menu__item">
+            <a href="#" class="dropdown-menu__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="dropdown-address">
+        <div class="dropdown-address__block">
+          <span class="dropdown-address__capture">
+            Ростов-На-Дону
+          </span>
+          <span class="dropdown-address__value">
+            ул. Вавилова 49, офис 211
+          </span>
+          <a href="tel:+78992002345" class="dropdown-address__link">
+            8 (899) 200-23-45
+          </a>
+        </div>
+        <div class="dropdown-address__block">
+          <span class="dropdown-address__capture">
+            Таганрог
+          </span>
+          <span class="dropdown-address__value">
+            ул. Название 250, офис 4
+          </span>
+          <a href="tel:+78995000025" class="dropdown-address__link">
+            8 (899) 500-00-25
+          </a>
+        </div>
+      </address>
+      <div class="dropdown__soc">
+        <ul class="list-reset footer-soc">
+          <li class="footer-soc__item">
+            <a href="#" class="footer-soc__link footer-soc__link--vk">
+              <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.1611 16.25C5.2779 16.25 0.211118 10.1502 0 0L4.4497 0C4.59586 7.44996 7.87624 10.6056 10.4746 11.2562L10.4746 0L14.6646 0V6.42515C17.2305 6.14862 19.926 3.22072 20.8354 0L25.0254 0C24.3271 3.96897 21.404 6.89687 19.3253 8.10058C21.404 9.07655 24.7333 11.6304 26 16.25H21.3877C20.3971 13.1594 17.9288 10.7683 14.6646 10.4429V16.25L14.1611 16.25Z"
+                  fill="white" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer-soc__item">
+            <a href="#" class="footer-soc__link footer-soc__link--ok">
+              <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.68308 0C3.96201 0 0.945557 3.01655 0.945557 6.73753C0.945557 10.4586 3.96201 13.4753 7.68308 13.4753C11.4042 13.4753 14.4206 10.4586 14.4206 6.73753C14.4206 3.01655 11.4042 0 7.68308 0ZM7.68308 9.52286C6.14492 9.52286 4.89794 8.27579 4.89794 6.73762C4.89794 5.19946 6.14492 3.95248 7.68308 3.95248C9.22125 3.95248 10.4682 5.19946 10.4682 6.73762C10.4682 8.27579 9.22125 9.52286 7.68308 9.52286Z"
+                  fill="white" />
+                <path
+                  d="M10.0618 18.8364C12.7591 18.2869 14.3754 17.0095 14.4609 16.941C15.2502 16.308 15.377 15.155 14.744 14.3656C14.1111 13.5764 12.9583 13.4496 12.1688 14.0825C12.1521 14.096 10.4281 15.4184 7.59161 15.4204C4.75517 15.4184 2.99477 14.096 2.97809 14.0825C2.18861 13.4496 1.03574 13.5764 0.402846 14.3656C-0.230141 15.155 -0.103351 16.308 0.685931 16.941C0.772611 17.0105 2.45569 18.3211 5.22859 18.8577L1.36404 22.8964C0.66173 23.6248 0.682846 24.7845 1.41119 25.4868C1.76669 25.8296 2.22487 26 2.68266 26C3.16263 26 3.64212 25.8124 4.00157 25.4396L7.59171 21.6151L11.5445 25.4644C12.2607 26.1794 13.4204 26.1782 14.1352 25.4623C14.8501 24.7463 14.8492 23.5864 14.1332 22.8716L10.0618 18.8364Z"
+                  fill="white" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer-soc__item">
+            <a href="#" class="footer-soc__link footer-soc__link--tg">
+              <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.4174 13.1817L9.0204 18.7659C9.58841 18.7659 9.83441 18.5219 10.1294 18.2288L12.7925 15.6838L18.3106 19.7249C19.3226 20.2889 20.0357 19.9919 20.3087 18.7939L23.9308 1.82145L23.9318 1.82045C24.2528 0.324413 23.3907 -0.260601 22.4047 0.106408L1.1142 8.2576C-0.33883 8.82162 -0.31683 9.63164 0.867199 9.99865L6.31033 11.6917L18.9536 3.7805C19.5486 3.38649 20.0897 3.60449 19.6446 3.9985L9.4174 13.1817Z"
+                  fill="white" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+    <main class="main">
+      <section class="news">
+        <div class="heading news__heading">
+          <div class="container">
+            <ul class="breadcrumbs list-reset">
+              <li><a href="./">главная</a></li>
+              <li><a>новости</a></li>
+            </ul>
+            <h2 class="heading__title">Новости</h2>
+          </div>
+        </div>
+        <div class="container news__content">
+          <div class="news__items">
+            <div class="news__item">
+              <article class="news-sec__item news-item">
+                <a href="./news-item.html" class="news-item__link"></a>
+                <h4 class="news-item__title">
+                  Объективно рассмотрены соответствующими инстанциями.
+                </h4>
+                <p class="news-item__desc">
+                  Однозначно, реплицированные
+                  с зарубежных источников, современные исследования, которые представляют собой яркий пример
+                  континентально-европейского типа.
+                </p>
+                <time class="news-item__time" datetime="2023-09-25 21:04">25 сентября 2023 в 21:04</time>
+              </article>
+            </div>
+            <div class="news__item">
+              <article class="news-sec__item news-item">
+                <a href="./news-item.html" class="news-item__link"></a>
+                <h4 class="news-item__title">
+                  Неопровержимые выводы, а также непосредственные участники технического
+                </h4>
+                <p class="news-item__desc">
+                  Господа, семантический разбор
+                  внешних противодействий обеспечивает актуальность распределения внутренних резервов и ресурсов.
+                  Разнообразный и богатый опыт говорит нам.
+                </p>
+                <time class="news-item__time" datetime="2023-09-25 21:04">25 сентября 2023 в 21:04</time>
+              </article>
+            </div>
+            <div class="news__item">
+              <article class="news-sec__item news-item">
+                <a href="./news-item.html" class="news-item__link"></a>
+                <h4 class="news-item__title">
+                  Команды профессионалов,
+                  в своём классическом.
+                </h4>
+                <p class="news-item__desc">
+                  Новым свершениям, которые, в свою очередь, должны быть заблокированы в рамках своих собственных
+                  рациональных ограничений.
+                </p>
+                <time class="news-item__time" datetime="2023-09-25 21:04">25 сентября 2023 в 21:04</time>
+              </article>
+            </div>
+            <div class="news__item">
+              <article class="news-sec__item news-item">
+                <a href="./news-item.html" class="news-item__link"></a>
+                <h4 class="news-item__title">
+                  Новым свершениям, которые, в свою очередь, должны быть заблокированы в рамках своих собственных
+                  рациональных ограничений.
+                </h4>
+                <p class="news-item__desc">
+                  Внезапно, ключевые особенности структуры проекта, инициированные исключительно синтетически,
+                  ограничены исключительно образом мышления. Для современного мира сплочённость команды профессионалов.
+                </p>
+                <time class="news-item__time" datetime="2023-09-25 21:04">25 сентября 2023 в 21:04</time>
+              </article>
+            </div>
+            <div class="news__item">
+              <article class="news-sec__item news-item">
+                <a href="./news-item.html" class="news-item__link"></a>
+                <h4 class="news-item__title">
+                  Ясность нашей позиции очевидна
+                </h4>
+                <p class="news-item__desc">
+                  В своём стремлении улучшить пользовательский опыт мы упускаем, что стремящиеся вытеснить традиционное
+                  производство, нанотехнологии призывают нас к новым свершениям, которые, в свою очередь, должны быть
+                  описаны максимально подробно.
+                </p>
+                <time class="news-item__time" datetime="2023-09-25 21:04">25 сентября 2023 в 21:04</time>
+              </article>
+            </div>
+            <div class="news__item">
+              <article class="news-sec__item news-item">
+                <a href="./news-item.html" class="news-item__link"></a>
+                <h4 class="news-item__title">
+                  Кстати, активно развивающиеся страны третьего мира объявлены.
+                </h4>
+                <p class="news-item__desc">
+                  Для современного мира сплочённость команды профессионалов представляет собой интересный эксперимент
+                  проверки позиций, занимаемых участниками в отношении поставленных задач. Ясность нашей позиции
+                  очевидна:
+                </p>
+                <time class="news-item__time" datetime="2023-09-25 21:04">25 сентября 2023 в 21:04</time>
+              </article>
+            </div>
+          </div>
+          <div class="pagination">
+            <button>
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.9998 5.5217C13.8682 5.52094 13.7377 5.54616 13.6159 5.59593C13.4941 5.64569 13.3833 5.71902 13.2898 5.8117L7.28982 11.8117C7.10356 11.9991 6.99902 12.2525 6.99902 12.5167C6.99902 12.7809 7.10356 13.0343 7.28982 13.2217L13.2898 19.2217C13.4811 19.3855 13.7272 19.4711 13.9789 19.4614C14.2305 19.4517 14.4693 19.3474 14.6474 19.1693C14.8255 18.9912 14.9298 18.7524 14.9395 18.5008C14.9492 18.2491 14.8636 18.003 14.6998 17.8117L9.40982 12.5217L14.6998 7.2317C14.8402 7.09243 14.9362 6.91464 14.9756 6.72083C15.015 6.52702 14.996 6.32588 14.9211 6.14285C14.8462 5.95981 14.7186 5.80311 14.5547 5.69255C14.3907 5.58198 14.1976 5.52253 13.9998 5.5217Z" />
+              </svg>
+            </button>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <button>
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.9998 5.5217C13.8682 5.52094 13.7377 5.54616 13.6159 5.59593C13.4941 5.64569 13.3833 5.71902 13.2898 5.8117L7.28982 11.8117C7.10356 11.9991 6.99902 12.2525 6.99902 12.5167C6.99902 12.7809 7.10356 13.0343 7.28982 13.2217L13.2898 19.2217C13.4811 19.3855 13.7272 19.4711 13.9789 19.4614C14.2305 19.4517 14.4693 19.3474 14.6474 19.1693C14.8255 18.9912 14.9298 18.7524 14.9395 18.5008C14.9492 18.2491 14.8636 18.003 14.6998 17.8117L9.40982 12.5217L14.6998 7.2317C14.8402 7.09243 14.9362 6.91464 14.9756 6.72083C15.015 6.52702 14.996 6.32588 14.9211 6.14285C14.8462 5.95981 14.7186 5.80311 14.5547 5.69255C14.3907 5.58198 14.1976 5.52253 13.9998 5.5217Z" />
+              </svg>
+            </button>
+          </div>
+      </section>
+    </main>
+    <footer class="footer">
+  <div class="container footer__container">
+    <div class="footer__header">
+      <a href="./" class="header__logo footer__logo">воротные<br>системы</a>
+      <address class="footer__address">
+        <div class="footer__cont cont">
+          <div class="cont__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_16_502)">
+                <path
+                  d="M22.924 1.07611C22.0048 0.157967 20.7064 -0.204142 19.4437 0.112264L3.70922 4.04615C1.47516 4.60509 -0.0154221 6.52753 0.000421681 8.83078C0.0168279 11.1335 1.53375 13.0348 3.77541 13.5627L9.1687 14.8318L10.4378 20.2252C10.9657 22.4669 12.867 23.9838 15.1696 24.0002H15.2065C17.4933 24.0002 19.398 22.5137 19.9541 20.2913L23.8879 4.55644C24.2031 3.29559 23.8427 1.99481 22.924 1.07611ZM21.5595 3.97406L17.6257 19.709C17.2753 21.1134 16.114 21.6454 15.1865 21.6003C14.2373 21.5939 13.1054 21.0847 12.7743 19.6756L11.4878 14.2094L16.448 9.24914C16.9167 8.78039 16.9167 8.02106 16.448 7.55231C15.9793 7.08356 15.2199 7.08356 14.7512 7.55231L9.79106 12.5126L4.32497 11.226C2.91586 10.895 2.4067 9.76298 2.40028 8.81381C2.39386 7.86464 2.88717 6.72558 4.29159 6.37462L20.0261 2.44073C20.0261 2.44073 20.2464 2.40033 20.346 2.40033C20.7972 2.40033 21.1025 2.64876 21.2267 2.77355C21.379 2.92528 21.7165 3.34711 21.5595 3.97406Z"
+                  fill="#0B83F2" />
+              </g>
+              <defs>
+                <clipPath id="clip0_16_502">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div class="cont__info">
+            <span class="cont__capture">центральный офис</span>
+            <span class="cont__value">Ростов-на-Дону, ул. Вавилова 49, офис 211</span>
+          </div>
+        </div>
+        <div class="footer__cont cont">
+          <div class="cont__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_16_497)">
+                <path
+                  d="M12 0C5.38303 0 0 5.38303 0 12C0 18.617 5.38303 24 12 24C18.617 24 24 18.617 24 12C24 5.38298 18.617 0 12 0ZM12 21.6C6.70664 21.6 2.4 17.2934 2.4 12C2.4 6.70664 6.70664 2.4 12 2.4C17.2934 2.4 21.6 6.70664 21.6 12C21.6 17.2934 17.2934 21.6 12 21.6ZM18 12C18 12.6627 17.4627 13.2 16.8 13.2H12C11.3373 13.2 10.8 12.6627 10.8 12V6C10.8 5.33733 11.3373 4.8 12 4.8C12.6627 4.8 13.2 5.33733 13.2 6V10.8H16.8C17.4627 10.8 18 11.3373 18 12Z"
+                  fill="#0B83F2" />
+              </g>
+              <defs>
+                <clipPath id="clip0_16_497">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div class="cont__info">
+            <span class="cont__capture">время работы:</span>
+            <span class="cont__value">пн-пт: 8.30 — 17.00</span>
+          </div>
+        </div>
+        <div class="footer__links">
+          <a href="tel:+78992002345">8 (899) 200-23-45</a>
+          <a href="tel:+78992002345">8 (899) 500-00-25</a>
+        </div>
+      </address>
+    </div>
+    <nav class="footer__nav footer-nav">
+      <h5 class="footer-nav__title">Каталог продукции</h5>
+      <ul class="list-reset footer-nav__list">
+        <li class="footer-nav__item">
+          <a href="./gates.html" class="footer-nav__link">Ворота</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#" class="footer-nav__link">Заборы</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#" class="footer-nav__link">Навесы</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#" class="footer-nav__link">Решетки на окна</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#" class="footer-nav__link">Козырьки</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#" class="footer-nav__link">Еще</a>
+        </li>
+      </ul>
+      <small class="footer__copy">2013-2024 © ООО «Воротные системы»</small>
+    </nav>
+    <nav class="footer__nav footer-nav">
+      <h5 class="footer-nav__title">Меню</h5>
+      <ul class="list-reset footer-nav__list">
+        <li class="footer-nav__item">
+          <a href="./about.html" class="footer-nav__link">О компании</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#" class="footer-nav__link">Каталог продукции</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#" class="footer-nav__link">Каталог продукции</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#" class="footer-nav__link">Отзывы</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#" class="footer-nav__link">Контакты</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#" class="footer-nav__link">Вакансии</a>
+        </li>
+        <li class="footer-nav__item">
+          <a href="#" class="footer-nav__link">Новости</a>
+        </li>
+      </ul>
+      <small class="footer__copy">Политика конфиденциальности</small>
+    </nav>
+    <div class="footer__soc">
+      <h5 class="footer-nav__title">Мы в социальных сетях</h5>
+      <ul class="list-reset footer-soc">
+        <li class="footer-soc__item">
+          <a href="#" class="footer-soc__link footer-soc__link--vk">
+            <svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.1611 16.25C5.2779 16.25 0.211118 10.1502 0 0L4.4497 0C4.59586 7.44996 7.87624 10.6056 10.4746 11.2562L10.4746 0L14.6646 0V6.42515C17.2305 6.14862 19.926 3.22072 20.8354 0L25.0254 0C24.3271 3.96897 21.404 6.89687 19.3253 8.10058C21.404 9.07655 24.7333 11.6304 26 16.25H21.3877C20.3971 13.1594 17.9288 10.7683 14.6646 10.4429V16.25L14.1611 16.25Z"
+                fill="white" />
+            </svg>
+          </a>
+        </li>
+        <li class="footer-soc__item">
+          <a href="#" class="footer-soc__link footer-soc__link--ok">
+            <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.68308 0C3.96201 0 0.945557 3.01655 0.945557 6.73753C0.945557 10.4586 3.96201 13.4753 7.68308 13.4753C11.4042 13.4753 14.4206 10.4586 14.4206 6.73753C14.4206 3.01655 11.4042 0 7.68308 0ZM7.68308 9.52286C6.14492 9.52286 4.89794 8.27579 4.89794 6.73762C4.89794 5.19946 6.14492 3.95248 7.68308 3.95248C9.22125 3.95248 10.4682 5.19946 10.4682 6.73762C10.4682 8.27579 9.22125 9.52286 7.68308 9.52286Z"
+                fill="white" />
+              <path
+                d="M10.0618 18.8364C12.7591 18.2869 14.3754 17.0095 14.4609 16.941C15.2502 16.308 15.377 15.155 14.744 14.3656C14.1111 13.5764 12.9583 13.4496 12.1688 14.0825C12.1521 14.096 10.4281 15.4184 7.59161 15.4204C4.75517 15.4184 2.99477 14.096 2.97809 14.0825C2.18861 13.4496 1.03574 13.5764 0.402846 14.3656C-0.230141 15.155 -0.103351 16.308 0.685931 16.941C0.772611 17.0105 2.45569 18.3211 5.22859 18.8577L1.36404 22.8964C0.66173 23.6248 0.682846 24.7845 1.41119 25.4868C1.76669 25.8296 2.22487 26 2.68266 26C3.16263 26 3.64212 25.8124 4.00157 25.4396L7.59171 21.6151L11.5445 25.4644C12.2607 26.1794 13.4204 26.1782 14.1352 25.4623C14.8501 24.7463 14.8492 23.5864 14.1332 22.8716L10.0618 18.8364Z"
+                fill="white" />
+            </svg>
+          </a>
+        </li>
+        <li class="footer-soc__item">
+          <a href="#" class="footer-soc__link footer-soc__link--tg">
+            <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.4174 13.1817L9.0204 18.7659C9.58841 18.7659 9.83441 18.5219 10.1294 18.2288L12.7925 15.6838L18.3106 19.7249C19.3226 20.2889 20.0357 19.9919 20.3087 18.7939L23.9308 1.82145L23.9318 1.82045C24.2528 0.324413 23.3907 -0.260601 22.4047 0.106408L1.1142 8.2576C-0.33883 8.82162 -0.31683 9.63164 0.867199 9.99865L6.31033 11.6917L18.9536 3.7805C19.5486 3.38649 20.0897 3.60449 19.6446 3.9985L9.4174 13.1817Z"
+                fill="white" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+  </div>
+</body>
+
+</html>
