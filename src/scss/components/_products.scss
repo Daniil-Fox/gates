@@ -191,6 +191,15 @@
   position: relative;
   transition: background-color .3s ease-out;
 
+  &__link {
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 6;
+      inset: 0;
+    }
+  }
+
   @include big-desktop {
     padding: 30px;
     border-radius: 20px;

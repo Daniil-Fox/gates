@@ -799,6 +799,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const objects = document.querySelectorAll(".object");
+if (objects && objects.length > 0) {
+  objects.forEach(el => {
+    const capture = el.querySelector(".object__link");
+    el.addEventListener("mouseenter", e => {
+      capture.style.maxWidth = capture.scrollWidth + "px";
+    });
+    el.addEventListener("mouseleave", e => {
+      capture.style.maxWidth = null;
+    });
+  });
+}
 })();
 
 /******/ })()

@@ -8,6 +8,16 @@
     @include('partials/header.html')
     <main class="main">
       <section class="news-article">
+        <div class="heading news-article__heading">
+          <div class="container">
+            <ul class="list-reset breadcrumbs">
+              <li><a href="./">главная</a></li>
+              <li><a href="./news.html">новости</a></li>
+              <li><a>некоторое название новости</a></li>
+            </ul>
+            <h2 class="heading__title">Некоторое название новости</h2>
+          </div>
+        </div>
         <div class="container news-article__container">
           <div class="news-article__content">
             <time class="news-article__time news-item__time" datetime="2023-09-25 21:04">25 сентября 2023 в 21:04</time>
@@ -77,6 +87,7 @@
           </div>
         </div>
       </section>
+      @include('partials/news-sec.html')
     </main>
     @include('partials/footer.html')
   </div>

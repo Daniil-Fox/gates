@@ -1,8 +1,23 @@
 .news-article {
+
+
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
+    padding: 80px 0 0;
+
+    @include big-desktop {
+      padding: 80px 0 0;
+    }
+
+    @include tablet {
+      padding: 60px 0 0;
+    }
+
+    @include small-tablet {
+      padding: 40px 0 0;
+    }
 
     @include small-tablet {
       grid-template-columns: repeat(2, 1fr);

@@ -87,6 +87,14 @@
     line-height: 171%;
     color: var(--chernyy);
 
+    a {
+      color: inherit;
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+
     @include big-desktop {
       font-size: 10px;
       line-height: 150%

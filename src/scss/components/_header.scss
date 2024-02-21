@@ -50,13 +50,27 @@
   }
 
   &__logo {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 156%;
-    color: var(--chernyy);
+    grid-column: 2 span;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @include big-desktop {
+      grid-column: 1 span;
+      width: 150px;
+      height: 40px;
+    }
 
     @include tablet {
-      font-size: 14px;
+      width: 68px;
+      height: 48px;
     }
   }
 }
