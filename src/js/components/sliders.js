@@ -122,3 +122,13 @@ const galleryTop = new Swiper(".item-hero__slider", {
     control: galleryThumbs,
   },
 });
+
+const newsArticle = new Swiper(".news-article__slider", {
+  slidesPerView: 1,
+  effect: "fade",
+  crossFade: true,
+  navigation: {
+    prevEl: ".news-prev-btn",
+    nextEl: ".news-next-btn",
+  },
+});

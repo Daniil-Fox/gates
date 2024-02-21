@@ -45,15 +45,34 @@
 
   &__image {
     grid-column: 7 span;
-    padding-right: 90px;
+    margin-right: 90px;
     position: relative;
+    border-radius: 40px;
+    overflow: hidden;
 
     @include big-desktop {
-      padding-right: 20px;
+      margin-right: 20px;
     }
 
     @include small-tablet {
-      padding-right: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .3s ease-out, z-index .3s ease-out;
+    background-color: #000;
+    object-fit: cover;
+
+    &.active {
+      opacity: 1;
+      z-index: 10;
     }
   }
 
@@ -191,7 +210,7 @@
 
 .about-play {
   position: absolute;
-  right: 90px;
+  right: 0;
   bottom: 0;
   border: 2px solid var(--svetlo-siniy);
   border-radius: 40px;
@@ -199,12 +218,11 @@
   height: 48.3%;
 
   @include big-desktop {
-    right: 20px;
+
     width: 28%;
   }
 
   @include small-tablet {
-    right: 0;
     border-radius: 24px;
   }
 

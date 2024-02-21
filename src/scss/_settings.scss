@@ -404,3 +404,13 @@ a {
   }
 
 }
+
+
+.just-validate-error-label {
+  display: none;
+}
+
+
+.just-validate-error-field {
+  outline: 2px solid var(--krasnyy);
+}

@@ -37,6 +37,13 @@
           </li>
           <li class="nav__item">
             <a href="./ready.html" class="nav__link">Портфолио</a>
+            <ul class="nav__dropdown nav-dropdown list-reset">
+              <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="./gates.html">Ворота</a></li>
+              <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Навесы</a></li>
+              <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Заборы</a></li>
+              <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Козырьки</a></li>
+              <li class="nav-dropdown__item"><a class="nav-dropdown__link" href="#">Прочее</a></li>
+            </ul>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">Отзывы</a>
@@ -66,11 +73,7 @@
       </a>
       <div class="header-bottom__right">
         <button class="header-bottom__btn btn-reset">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M5.5 4.4C5.5 3.79251 5.99251 3.3 6.6 3.3H20.9C21.5075 3.3 22 3.79251 22 4.4C22 5.0075 21.5075 5.5 20.9 5.5H6.6C5.99251 5.5 5.5 5.00745 5.5 4.4ZM20.9 9.9H1.1C0.492508 9.9 0 10.3926 0 11C0 11.6075 0.492508 12.1 1.1 12.1H20.9C21.5075 12.1 22 11.6075 22 11C22 10.3926 21.5075 9.9 20.9 9.9ZM20.9 16.5H11C10.3926 16.5 9.9 16.9925 9.9 17.6C9.9 18.2075 10.3926 18.7 11 18.7H20.9C21.5075 18.7 22 18.2075 22 17.6C22 16.9925 21.5075 16.5 20.9 16.5Z"
-              fill="white" />
-          </svg>
+
           <span>Каталог продукции</span>
         </button>
         <form action="#" class="header-bottom__form">
@@ -119,7 +122,7 @@
           <span class="header-mob__cap">Таганрог</span>
           <span class="header-mob__tel">8 (899) 500-00-25</span>
         </a>
-        <button class="btn-reset header-mob__btn btn btn--white">Перезвонить</button>
+        <button class="btn-reset header-mob__btn btn btn--white" data-modal-btn>Перезвонить</button>
       </div>
     </div>
   </div>
@@ -595,6 +598,56 @@
             </button>
           </div>
       </section>
+      <div class="modal" data-modal-form>
+  <div class="modal__window" data-modal-form>
+    <button class="btn-reset modal__close">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.35">
+          <path
+            d="M25.0507 4.68627L4.68606 25.0509C4.06124 25.6758 4.06129 26.6889 4.68606 27.3137C5.31088 27.9385 6.32398 27.9385 6.9488 27.3137L27.3135 6.94901C27.9383 6.32419 27.9383 5.31108 27.3135 4.68627C26.6887 4.06149 25.6756 4.06145 25.0507 4.68627Z"
+            fill="#1C1C1C" />
+          <path
+            d="M4.68755 6.94863L25.0522 27.3133C25.677 27.9381 26.6902 27.9381 27.315 27.3133C27.9398 26.6885 27.9398 25.6754 27.315 25.0506L6.95029 4.68589C6.32547 4.06107 5.31236 4.06107 4.68755 4.68589C4.06277 5.31066 4.06273 6.32381 4.68755 6.94863Z"
+            fill="#1C1C1C" />
+        </g>
+      </svg>
+    </button>
+    <h4 class="modal__title title2">Оставьте заявку</h4>
+    <p class="modal__desc">
+      Заполните форму и наш менеджер
+      свяжется с Вами в ближайшее время.
+    </p>
+    <form action="post" class="modal-form modal__form">
+      <input class="input modal__input input-reset input-name" type="text" id="name" name="name" placeholder="Ваше имя">
+      <input class="input modal__input input-reset input-tel" type="tel" id="name" name="name"
+        placeholder="Номер телефона">
+      <button type="submit" class="btn btn-reset modal__btn">Оставить заявку</button>
+    </form>
+
+    <small class="modal__copy">
+      Оставляя заявку вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>
+    </small>
+  </div>
+  <div class="modal__window" data-modal-thanks>
+    <button class="btn-reset modal__close">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g opacity="0.35">
+          <path
+            d="M25.0507 4.68627L4.68606 25.0509C4.06124 25.6758 4.06129 26.6889 4.68606 27.3137C5.31088 27.9385 6.32398 27.9385 6.9488 27.3137L27.3135 6.94901C27.9383 6.32419 27.9383 5.31108 27.3135 4.68627C26.6887 4.06149 25.6756 4.06145 25.0507 4.68627Z"
+            fill="#1C1C1C" />
+          <path
+            d="M4.68755 6.94863L25.0522 27.3133C25.677 27.9381 26.6902 27.9381 27.315 27.3133C27.9398 26.6885 27.9398 25.6754 27.315 25.0506L6.95029 4.68589C6.32547 4.06107 5.31236 4.06107 4.68755 4.68589C4.06277 5.31066 4.06273 6.32381 4.68755 6.94863Z"
+            fill="#1C1C1C" />
+        </g>
+      </svg>
+    </button>
+    <h4 class="modal__title title2">Заявка отправлена</h4>
+    <p class="modal__desc">
+      Мы скоро свяжемся с Вами.
+    </p>
+    <button class="btn btn-reset modal__btn modal__btn-close">Закрыть <span class="timer">4c</span></button>
+  </div>
+</div>
     </main>
     <footer class="footer">
   <div class="container footer__container">

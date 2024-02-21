@@ -3,11 +3,25 @@
   inset: 0;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  gap: 60px;
   justify-content: center;
   background: rgba(#000, 0.25);
   opacity: 0;
   z-index: -1;
   transition: opacity .3s ease-out, z-index .3s ease-out;
+
+  @include small-tablet {
+    gap: 24px;
+  }
+
+  &__form {
+    margin-bottom: 40px;
+
+    @include small-tablet {
+      margin-bottom: 24px;
+    }
+  }
 
   &.active {
     opacity: 1;
@@ -20,6 +34,13 @@
     right: 50px;
     width: 32px;
     height: 32px;
+
+    @include small-tablet {
+      width: 24px;
+      height: 24px;
+      top: 22px;
+      right: 22px;
+    }
 
     svg {
       width: 100%;
@@ -37,10 +58,29 @@
 
     display: flex;
     flex-direction: column;
+
+    &[data-modal-thanks] {
+      display: none;
+    }
+
+    @include small-tablet {
+      padding: 60px;
+      border-radius: 40px;
+    }
+
+    @include mobile {
+      padding: 40px;
+    }
   }
 
   &__title {
     margin-bottom: 40px;
+    max-width: 50%;
+
+    @include small-tablet {
+      font-size: 30px;
+      margin-bottom: 24px;
+    }
   }
 
   &__desc {
@@ -50,6 +90,15 @@
     font-size: 22px;
     line-height: 145%;
     color: var(--chernyy);
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
   }
 
   &__input {
@@ -60,15 +109,28 @@
     border-radius: 15px;
 
     margin-bottom: 12px;
+
+    @include small-tablet {
+      margin-bottom: 8px;
+    }
   }
 
   &__btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     text-align: center;
+    height: 100px;
+    font-size: 22px;
+
+    @include small-tablet {
+      font-size: 15px;
+    }
 
     &:last-child {
       margin-bottom: 40px;
+
     }
   }
 
@@ -78,6 +140,12 @@
     line-height: 171%;
     text-align: center;
     color: var(--chernyy);
+
+    @include small-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
     a {
       color: var(--siniy1);

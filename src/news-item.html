@@ -29,11 +29,21 @@
                     <img src="./img/news-cover.jpg" alt="">
                   </picture>
                 </div>
+                <div class="swiper-slide">
+                  <picture>
+                    <source srcset="./img/news-cover.webp">
+                    <img src="./img/news-cover.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="swiper-slide">
+                  <picture>
+                    <source srcset="./img/news-cover.webp">
+                    <img src="./img/news-cover.jpg" alt="">
+                  </picture>
+                </div>
               </div>
               <div class="news-article__control control">
-                <div class="control__cube"></div>
-                <div class="control__cube"></div>
-                <button class="btn-reset prod__btn prod__btn--prev">
+                <button class="btn-reset prod__btn prod__btn--prev news-prev-btn">
 
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -41,7 +51,7 @@
                       fill="white" />
                   </svg>
                 </button>
-                <button class="btn-reset prod__btn prod__btn--next">
+                <button class="btn-reset prod__btn prod__btn--next news-next-btn">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M14.9998 4.99997C14.8682 4.99921 14.7377 5.02443 14.6159 5.0742C14.4941 5.12396 14.3833 5.19729 14.2898 5.28997L8.28982 11.29C8.10356 11.4773 7.99902 11.7308 7.99902 11.995C7.99902 12.2592 8.10356 12.5126 8.28982 12.7L14.2898 18.7C14.4811 18.8638 14.7272 18.9494 14.9789 18.9397C15.2305 18.93 15.4693 18.8256 15.6474 18.6475C15.8255 18.4694 15.9298 18.2307 15.9395 17.979C15.9492 17.7273 15.8636 17.4813 15.6998 17.29L10.4098 12L15.6998 6.70997C15.8402 6.5707 15.9362 6.39292 15.9756 6.1991C16.015 6.00529 15.996 5.80415 15.9211 5.62112C15.8462 5.43808 15.7186 5.28138 15.5547 5.17082C15.3907 5.06025 15.1976 5.0008 14.9998 4.99997Z"
@@ -88,6 +98,8 @@
         </div>
       </section>
       @include('partials/news-sec.html')
+
+      @include('partials/modal.html')
     </main>
     @include('partials/footer.html')
   </div>

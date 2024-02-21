@@ -57,6 +57,14 @@
     overflow: hidden;
     margin-bottom: 30px;
 
+    &.active {
+      video {
+        position: relative;
+        z-index: 10;
+      }
+
+    }
+
     @include tablet {
       margin-bottom: 20px;
     }

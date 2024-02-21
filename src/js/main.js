@@ -17,3 +17,17 @@ if (objects && objects.length > 0) {
     });
   });
 }
+
+const playButtons = document.querySelectorAll("[data-video-play]");
+
+playButtons.forEach((el) => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
+    const videoContainer = el.closest("[data-video-container]");
+    const video = videoContainer.querySelector("[data-video-content]");
+    video.classList.add("active");
+    videoContainer.classList.add("active");
+    video.setAttribute("controls", "");
+    video.play();
+  });
+});
