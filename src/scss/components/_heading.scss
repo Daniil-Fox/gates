@@ -3,6 +3,8 @@
   padding-top: 45px;
   padding-bottom: 57px;
   border-radius: 40px;
+  position: relative;
+  overflow: hidden;
 
   @include tablet {
     padding: 40px 0;
@@ -12,8 +14,33 @@
     padding: 30px 0;
   }
 
+  &__image {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    right: 100px;
+    transform: translate(0, -50%);
+
+    @include tablet {
+      right: 50px;
+      width: 400px;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
   .breadcrumbs {
     margin-bottom: 30px;
+    position: relative;
+    z-index: 4;
 
     @include small-tablet {
       margin-bottom: 12px;
@@ -36,6 +63,8 @@
     font-size: 54px;
     line-height: 115%;
     color: var(--belyy);
+    position: relative;
+    z-index: 4;
 
     @include tablet {
       font-size: 46px;
