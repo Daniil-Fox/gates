@@ -17,6 +17,8 @@
   &__top {
     padding: 10px 0;
     background-color: var(--siniy2);
+    position: relative;
+    z-index: 10;
 
     @include small-tablet {
       display: none;
