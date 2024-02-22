@@ -381,6 +381,8 @@ new Swiper(".documents__slider", {
 new Swiper(".prod__slider", {
   slidesPerView: 1,
   loop: true,
+  effect: "fade",
+  crossFade: true,
   navigation: {
     prevEl: ".prod__btn--prev",
     nextEl: ".prod__btn--next"

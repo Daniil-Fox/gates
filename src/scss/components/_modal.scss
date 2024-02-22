@@ -63,7 +63,8 @@
       display: none;
     }
 
-    @include small-tablet {
+    @include big-desktop {
+
       padding: 60px;
       border-radius: 40px;
     }
@@ -91,11 +92,11 @@
     line-height: 145%;
     color: var(--chernyy);
 
-    @include tablet {
+    @include big-desktop {
       margin-bottom: 40px;
     }
 
-    @include small-tablet {
+    @include big-desktop {
       font-size: 16px;
       margin-bottom: 32px;
     }
@@ -110,7 +111,7 @@
 
     margin-bottom: 12px;
 
-    @include small-tablet {
+    @include big-desktop {
       margin-bottom: 8px;
     }
   }
@@ -126,11 +127,6 @@
 
     @include small-tablet {
       font-size: 15px;
-    }
-
-    &:last-child {
-      margin-bottom: 40px;
-
     }
   }
 

@@ -88,8 +88,7 @@
     bottom: -80px;
     width: 840px;
     height: 688px;
-    border-radius: 40px;
-    overflow: hidden;
+
 
     @include big-desktop {
       width: 740px;
@@ -118,13 +117,14 @@
   }
 
   &__image {
-    mask-image: url('./../img/prod-cover.png');
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    mask-size: 100% 100%;
+    border-radius: 40px;
+    border-top-right-radius: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 
-    @include small-tablet {
-      mask-image: url('./../img/mob-prod-mask.png');
+    @include tablet {
+      border-radius: 24px;
     }
 
     img {
@@ -140,22 +140,29 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    right: 30px;
-    top: 20px;
+    right: 0;
+    bottom: unset;
+    top: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 40px;
+    padding-top: 0;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 20px;
 
     @include big-desktop {
-      right: 10px;
+      right: 0;
     }
 
     @include tablet {
-      top: 25px;
-      right: 25px;
-    }
-
-    @include small-tablet {
       top: unset;
+      padding-bottom: 0;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 24px;
+      padding-top: 20px;
+      padding-left: 20px;
       bottom: 0;
-      right: 20px;
+      right: 0;
     }
   }
 

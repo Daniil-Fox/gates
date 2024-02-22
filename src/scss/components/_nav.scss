@@ -61,7 +61,7 @@
 
 .nav-dropdown {
   position: absolute;
-  z-index: 10;
+  z-index: -1;
   top: calc(100% + 21px);
   left: 50%;
   transform: translateX(-50%);
@@ -71,7 +71,7 @@
   box-sizing: content-box;
   overflow: hidden;
   max-height: 0;
-  transition: max-height .3s ease-out;
+  transition: max-height .3s ease-out, z-index .3s ease-out;
   will-change: max-height;
 
   &__item {
@@ -111,6 +111,7 @@
 
     @include hover {
       color: var(--siniy1);
+      z-index: 50;
 
       &::after {
 
