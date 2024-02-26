@@ -10,10 +10,17 @@ dropdownBtn.addEventListener("click", (e) => {
   const header = document.querySelector("header");
   header.classList.toggle("active");
   if (isActive) {
-    dropdown.style.maxHeight = dropdown.scrollHeight + "px";
-    setTimeout(() => {
-      dropdown.style.maxHeight = "unset";
-    }, 300);
+    if (window.matchMedia("(max-width: 450px)").matches) {
+      dropdown.style.maxHeight =
+        window.innerHeight < dropdown.scrollHeight
+          ? "70vh"
+          : dropdown.scrollHeight + "px";
+    } else {
+      dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+      setTimeout(() => {
+        dropdown.style.maxHeight = "unset";
+      }, 300);
+    }
   } else {
     dropdown.style.maxHeight = "600px";
     setTimeout(() => {

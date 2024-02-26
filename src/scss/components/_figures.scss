@@ -1,5 +1,6 @@
 .figures {
   padding: 100px 0;
+  overflow: hidden;
 
   @include big-desktop {
     padding: 70px 0;

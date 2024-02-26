@@ -1,5 +1,22 @@
 .header {
   position: relative;
+  z-index: 12;
+  background-color: var(--belyy);
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity .1s ease-out;
+
+
+  }
+
+  @include mobile {
+    max-height: 40vh;
+  }
 
   &__dropdown {
     position: absolute;
@@ -8,10 +25,16 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    box-sizing: content-box;
-
+    overflow: auto;
     max-height: 0;
     overflow: hidden;
+    box-sizing: border-box;
+
+    @include small-tablet {
+      left: unset;
+      transform: unset;
+      margin-left: 0;
+    }
   }
 
   &__top {

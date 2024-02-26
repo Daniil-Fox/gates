@@ -20,6 +20,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_requisites__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/requisites */ "./src/js/components/requisites.js");
 /* harmony import */ var _components_requisites__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_requisites__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_validate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/validate */ "./src/js/components/validate.js");
+/* harmony import */ var _components_mobileScroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/mobileScroll */ "./src/js/components/mobileScroll.js");
+/* harmony import */ var _components_mobileScroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_mobileScroll__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -179,10 +182,14 @@ dropdownBtn.addEventListener("click", e => {
   const header = document.querySelector("header");
   header.classList.toggle("active");
   if (isActive) {
-    dropdown.style.maxHeight = dropdown.scrollHeight + "px";
-    setTimeout(() => {
-      dropdown.style.maxHeight = "unset";
-    }, 300);
+    if (window.matchMedia("(max-width: 450px)").matches) {
+      dropdown.style.maxHeight = window.innerHeight < dropdown.scrollHeight ? "70vh" : dropdown.scrollHeight + "px";
+    } else {
+      dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+      setTimeout(() => {
+        dropdown.style.maxHeight = "unset";
+      }, 300);
+    }
   } else {
     dropdown.style.maxHeight = "600px";
     setTimeout(() => {
@@ -231,6 +238,32 @@ if (faqItems && faqItems.length > 0) {
       const isActive = el.classList.toggle("active");
       content.style.maxHeight = isActive ? content.scrollHeight + "px" : null;
     });
+  });
+}
+
+/***/ }),
+
+/***/ "./src/js/components/mobileScroll.js":
+/*!*******************************************!*\
+  !*** ./src/js/components/mobileScroll.js ***!
+  \*******************************************/
+/***/ (() => {
+
+const header = document.querySelector("header");
+const headerHeight = header.offsetHeight;
+const siteContainer = document.querySelector(".site-container");
+if (window.matchMedia("(max-width: 768px)").matches) {
+  window.addEventListener("scroll", e => {
+    let scrollDistanse = window.scrollY;
+    if (scrollDistanse > 0) {
+      header.classList.add("header--fixed");
+      header.style.opacity = 1;
+      siteContainer.style.paddingTop = headerHeight + "px";
+    } else {
+      header.classList.remove("header--fixed");
+      siteContainer.style.paddingTop = null;
+      header.style.opacity = null;
+    }
   });
 }
 

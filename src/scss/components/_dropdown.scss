@@ -1,9 +1,13 @@
 .dropdown {
-
   border-radius: 0 0 40px 40px;
   background-color: var(--belyy);
   transition: padding-top .3s ease-out, padding-bottom .3s ease-out, max-height .3s ease-out;
   will-change: padding-top, padding-bottom, max-height;
+  overflow-y: auto;
+
+  @include small-tablet {
+    padding: 0 20px;
+  }
 
   &.active {
     padding-top: 100px;
@@ -17,7 +21,7 @@
     }
 
     @include small-tablet {
-      padding: 0 20px;
+
       padding-top: 30px;
       padding-bottom: 30px;
     }
@@ -26,7 +30,7 @@
   &__container {
     max-width: 66%;
     margin: 0 auto;
-
+    max-height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
@@ -39,7 +43,7 @@
 
     @include small-tablet {
       max-width: 100%;
-      padding: 0 20px;
+      width: 100%;
       grid-template-columns: repeat(2, 1fr);
       gap: 32px;
 

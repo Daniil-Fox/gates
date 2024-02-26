@@ -51,16 +51,16 @@
     }
 
     @include mobile {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      display: grid;
       margin: 0;
       right: 0;
       justify-self: flex-end;
+      align-items: flex-end;
     }
 
     img {
       height: 100%;
+      width: 100%;
       object-fit: contain;
     }
   }
@@ -89,6 +89,8 @@
 
   &__content {
     grid-column: 7 span;
+    position: relative;
+    z-index: 4;
 
     @include tablet {
       grid-column: 1 span;
